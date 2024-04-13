@@ -1,6 +1,8 @@
 local ttc = core:get_static_object("tabletopcaps");
 local pttg_merc_pool = core:get_static_object("pttg_merc_pool");
 local pttg = core:get_static_object("pttg");
+local ttc = core:get_static_object("tabletopcaps");
+
 
 local available_merc_units = {}
 local merc_in_queue = {}
@@ -8,16 +10,18 @@ local merc_in_queue = {}
 local function init_glory_units() 
     pttg_merc_pool = core:get_static_object("pttg_merc_pool");
     pttg = core:get_static_object("pttg");
+
+    -- Disable TTC MercPanel Listeners
+    ttc.add_listeners_to_mercenary_panel = function() return nil end
 end
 
 local function hide_disabled() 
+    out("PR UNIT COST LOG - Hiding disabled units.")
     local recruitment_uic = find_uicomponent(core:get_ui_root(), "units_panel", "main_units_panel", "recruitment_docker", "recruitment_options", "mercenary_display")
     if recruitment_uic then
         
-        local recruitment_docker_uic = find_uicomponent(core:get_ui_root(), "units_panel", "main_units_panel", "recruitment_docker")
         local unit_list = find_uicomponent(recruitment_uic, "mercenary_display", "frame")
         local listview_uic = find_uicomponent(unit_list, "listview")
-        local hslider_uic = find_uicomponent(listview_uic, "hslider")
         local list_clip_uic = find_uicomponent(listview_uic, "list_clip")
         local list_box_uic = find_uicomponent(list_clip_uic, "list_box")
         
@@ -25,11 +29,14 @@ local function hide_disabled()
             
             local reference_unit = unit.."_mercenary"
             local unit_uic = find_uicomponent(list_box_uic, reference_unit)
-            if unit_uic and unit_uic:CurrentState() == "inactive" then
-                unit_uic:SetVisible(false)
-                unit_uic:SetDisabled(true)
-            else
-                available_merc_units[unit] = unit_info
+                           
+            if unit_uic then
+                if unit_uic:CurrentState() == "active" then
+                    available_merc_units[unit] = unit_info
+                else
+                    unit_uic:SetVisible(false)
+                    unit_uic:SetDisabled(true)
+                end
             end
         end
     end
@@ -42,18 +49,15 @@ local function finalise_uics()
     local recruitment_uic = find_uicomponent(core:get_ui_root(), "units_panel", "main_units_panel", "recruitment_docker", "recruitment_options", "mercenary_display")
     if recruitment_uic then
         for unit, unit_info in pairs(available_merc_units) do
-            local unit_uic = unit.."_mercenary"
-            local glory_cost = unit_info.tier
+            out("PR UNIT COST LOG - Available Merc: "..string.format("%s (%s)", unit, unit_info.cost))
+            local glory_cost = unit_info.cost
             local listview_uic = find_uicomponent(recruitment_uic, "frame", "listview")
 
-            local hslider_uic = find_uicomponent(listview_uic, "hslider")
-            local unit_uic = find_uicomponent(listview_uic, "list_clip", "list_box", unit_uic)
+            local unit_uic = find_uicomponent(listview_uic, "list_clip", "list_box", unit.."_mercenary")
 
 
             if unit_uic then
                 local recruitment_cost_uic = find_uicomponent(unit_uic, "unit_icon", "RecruitmentCost")
-
-                local upkeep_cost_uic = find_uicomponent(unit_uic, "unit_icon", "UpkeepCost")
                 
                 local glory_cost_uic_check = find_uicomponent(unit_uic, "unit_icon", "glory_cost")
 
@@ -61,30 +65,10 @@ local function finalise_uics()
                     UIComponent(recruitment_cost_uic:CopyComponent("glory_cost"))
                 end
 
-                -- dimensions for resizing components
-                local width_rcc, height_rcc = recruitment_cost_uic:Dimensions()
-
-                -- resizing unit component
---                 local width_uc, height_uc = unit_uic:Dimensions()
---                 unit_uic:SetCanResizeHeight(true)
---                 unit_uic:SetCanResizeWidth(true)
---                 unit_uic:Resize(width_uc, (height_uc + (height_rcc * 2) + 5), false)
--- 
---                 -- repositioning list_view
---                 listview_uic:SetDockOffset(0, -24)
-                
-
-
                 -- repositioning cost components
                 local glory_cost_parent_uic = find_uicomponent(unit_uic, "unit_icon", "glory_cost")
                 local glory_cost_uic = find_uicomponent(glory_cost_parent_uic, "Cost")
                 glory_cost_parent_uic:SetDockOffset(8, -5)
---                 upkeep_cost_uic:SetDockOffset(8, 42)
-
-                -- repositioning the hslider_uic
---                 if hslider_uic then
---                     hslider_uic:SetDockOffset(8, 49)
---                 end
 
                 local faction = cm:get_faction(cm:get_local_faction_name(true))
                 local player_glory = faction:pooled_resource_manager():resource("pttg_unit_reward_glory"):value()
@@ -94,6 +78,8 @@ local function finalise_uics()
                     glory_cost_uic:SetStateText(tostring(glory_cost), "")
                     unit_uic:SetState("active")
                     unit_uic:SetDisabled(false)
+
+                    out("PR UNIT COST LOG - Enabling component: "..unit)
                 else
                     -- setting cost text
                     glory_cost_uic:SetStateText(tostring("[[col:red]]"..glory_cost.."[[/col]]"), "")
@@ -112,6 +98,7 @@ local function finalise_uics()
                     end
 
                     -- disabling recruitment of unit
+                    out("PR UNIT COST LOG - Disabling component: "..unit)
                     unit_uic:SetState("inactive")
                     unit_uic:SetDisabled(true)
                 end
@@ -143,7 +130,7 @@ local function initialise_uics()
         local list_clip_uic = find_uicomponent(listview_uic, "list_clip")
         local list_box_uic = find_uicomponent(list_clip_uic, "list_box")
 
-
+        -- TODO: Is any of this necessary??
 
         -- gets the reference unit from the table
         local reference_unit = nil
@@ -229,8 +216,7 @@ local function glory_cost_listeners()
         end,
         true
     )
-    
-    
+
     --when a mercenary is added to queue, apply cost.
     core:add_listener(
         "pttg_glory_merc_shop",
@@ -246,7 +232,7 @@ local function glory_cost_listeners()
             local component_id = tostring(uic:Id())
             pttg:log("Click detected "..tostring(component_id))
             --is our clicked component a unit?
-            if string.find(component_id, "_mercenary") then
+            if string.find(component_id, "_mercenary") and not uic:IsDisabled() then
                 out("Component Clicked was a mercenary")
                 local unit_key = string.gsub(component_id, "_mercenary", "")
 
@@ -257,7 +243,7 @@ local function glory_cost_listeners()
                 if merc then
                     out("The new queued mercenary appeared")
                     local unit_record = pttg_merc_pool.merc_units[unit_key]
-                    cm:faction_add_pooled_resource(cm:get_local_faction_name(), "pttg_unit_reward_glory", "pttg_glory_unit_recruitment", -unit_record.tier)
+                    cm:faction_add_pooled_resource(cm:get_local_faction_name(), "pttg_unit_reward_glory", "pttg_glory_unit_recruitment", -unit_record.cost)
                 else
                     out("No queued mercenary appeared - it probably isn't a valid click")
                     merc_in_queue[#merc_in_queue] = nil
@@ -267,6 +253,7 @@ local function glory_cost_listeners()
             finalise_uics()
         end,
     true);
+
     --When a mercenary is removed from queue, refund.
     core:add_listener(
       "pttg_glory_merc_shop",
@@ -278,14 +265,14 @@ local function glory_cost_listeners()
           --# assume context: CA_UIContext
           local component = UIComponent(context.component)
           local component_id = tostring(component:Id())
-          if string.find(component_id, "temp_merc_") then
+          if string.find(component_id, "temp_merc_") and not component:IsDisabled() then
               local position = component_id:gsub("temp_merc_", "") 
               out("Component Clicked was a Queued Mercenary Unit @ ["..position.."]!")
 
               local int_pos = math.floor(tonumber(position)+1)
               local unit_key = merc_in_queue[int_pos]
               local unit_record = pttg_merc_pool.merc_units[unit_key]
-              cm:faction_add_pooled_resource(cm:get_local_faction_name(), "pttg_unit_reward_glory", "pttg_glory_unit_recruitment", unit_record.tier)
+              cm:faction_add_pooled_resource(cm:get_local_faction_name(), "pttg_unit_reward_glory", "pttg_glory_unit_recruitment", unit_record.cost)
               
               table.remove(merc_in_queue, int_pos)
               finalise_uics()
@@ -304,10 +291,10 @@ local function glory_cost_listeners()
         function(context)
             out("PR UNIT COST LOG - mercenary_panel panel closed.")
             cm:set_saved_value("pttg_glory_cost_uics_initialised", false)
-            
+
             for int_pos, merc in pairs(merc_in_queue) do
                 local unit_record = pttg_merc_pool.merc_units[merc]
-                cm:faction_add_pooled_resource(cm:get_local_faction_name(), "pttg_unit_reward_glory", "pttg_glory_unit_recruitment", unit_record.tier)
+                cm:faction_add_pooled_resource(cm:get_local_faction_name(), "pttg_unit_reward_glory", "pttg_glory_unit_recruitment", unit_record.cost)
                 table.remove(merc_in_queue, int_pos)
             end
         end,
@@ -315,6 +302,7 @@ local function glory_cost_listeners()
     )
 
 end
+
 
 cm:add_first_tick_callback(function() init_glory_units() end)
 cm:add_first_tick_callback(function() glory_cost_listeners() end)

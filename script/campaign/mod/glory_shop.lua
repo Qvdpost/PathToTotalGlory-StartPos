@@ -1,1186 +1,9 @@
 local pttg = core:get_static_object("pttg");
 
 local pttg_glory_shop = {
-    rituals = {
-        pttg_crafting_weapons = {
-            "pttg_ritual_wh2_dlc09_anc_weapon_golden_dagger",
-            "pttg_ritual_wh2_dlc09_anc_weapon_inscribed_khopesh",
-            "pttg_ritual_wh2_dlc09_anc_weapon_spear_of_pakth",
-            "pttg_ritual_wh2_dlc09_anc_weapon_the_blessed_blade_of_ptra",
-            "pttg_ritual_wh2_dlc09_anc_weapon_the_tomb_blade_of_arkhan",
-            "pttg_ritual_wh2_dlc09_anc_weapon_the_venom_staff",
-            "pttg_ritual_wh2_dlc10_anc_weapon_deathsword_and_the_cursed_blade",
-            "pttg_ritual_wh2_dlc10_anc_weapon_moonbow",
-            "pttg_ritual_wh2_dlc10_anc_weapon_the_widowmaker_1",
-            "pttg_ritual_wh2_dlc10_anc_weapon_the_widowmaker_2",
-            "pttg_ritual_wh2_dlc10_anc_weapon_the_widowmaker_3",
-            "pttg_ritual_wh2_dlc10_anc_weapon_warptech_arsenal",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_dragon_slayers_axe",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_elfbane",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_gate_keepers_hammer",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_ironbeards_axe",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_ironwardens_hammer",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_miners_pickaxe",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_old_guards_hammer",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_prospectors_pickaxe",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_rangers_hammer",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_slayers_axe",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_starbreaker",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_trollslayer_axe",
-            "pttg_ritual_wh2_dlc10_dwf_anc_weapon_veterans_hammer",
-            "pttg_ritual_wh2_dlc11_anc_weapon_double_barrel",
-            "pttg_ritual_wh2_dlc11_anc_weapon_krakens_bane",
-            "pttg_ritual_wh2_dlc11_anc_weapon_lucky_levis_hookhand",
-            "pttg_ritual_wh2_dlc11_anc_weapon_masamune",
-            "pttg_ritual_wh2_dlc11_anc_weapon_red_blades",
-            "pttg_ritual_wh2_dlc12_anc_weapon_blade_of_the_serpents_tongue",
-            "pttg_ritual_wh2_dlc12_anc_weapon_ceremonial_mace_of_malachite",
-            "pttg_ritual_wh2_dlc12_anc_weapon_mechanical_arm",
-            "pttg_ritual_wh2_dlc12_anc_weapon_retractable_fistblade",
-            "pttg_ritual_wh2_dlc12_anc_weapon_storm_daemon",
-            "pttg_ritual_wh2_dlc12_anc_weapon_the_blade_of_ancient_skies",
-            "pttg_ritual_wh2_dlc12_anc_weapon_thing_zapper",
-            "pttg_ritual_wh2_dlc13_anc_weapon_amber_bow",
-            "pttg_ritual_wh2_dlc13_anc_weapon_mace_of_ulumak",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_averland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_drakwald",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_hochland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_middenland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_nordland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_ostermark",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_ostland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_reikland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_solland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_stirland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_talabecland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_runefang_wissenland",
-            "pttg_ritual_wh2_dlc13_anc_weapon_scar",
-            "pttg_ritual_wh2_dlc14_anc_weapon_malus_blood_warpsword",
-            "pttg_ritual_wh2_dlc14_anc_weapon_malus_dagger_of_souls",
-            "pttg_ritual_wh2_dlc14_anc_weapon_malus_death_warpsword",
-            "pttg_ritual_wh2_dlc14_anc_weapon_malus_slaugher_warpsword",
-            "pttg_ritual_wh2_dlc14_anc_weapon_sword_of_lyonesse",
-            "pttg_ritual_wh2_dlc14_anc_weapon_warpsword_of_khaine",
-            "pttg_ritual_wh2_dlc14_anc_weapon_whirl_of_weeping_blades",
-            "pttg_ritual_wh2_dlc15_anc_weapon_axe_of_grom",
-            "pttg_ritual_wh2_dlc15_anc_weapon_fangsword_of_eltharion",
-            "pttg_ritual_wh2_dlc15_anc_weapon_moon_dragon_special",
-            "pttg_ritual_wh2_dlc15_anc_weapon_star_lance",
-            "pttg_ritual_wh2_dlc16_anc_weapon_creature_killer",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dart_of_doom",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dragon_spear_1",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dragon_spear_2",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dragon_spear_3",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dragon_spear_4",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dreaming_bow_1",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dreaming_bow_2",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dreaming_bow_3",
-            "pttg_ritual_wh2_dlc16_anc_weapon_dreaming_bow_4",
-            "pttg_ritual_wh2_dlc16_anc_weapon_eagle_bow_1",
-            "pttg_ritual_wh2_dlc16_anc_weapon_eagle_bow_2",
-            "pttg_ritual_wh2_dlc16_anc_weapon_eagle_bow_3",
-            "pttg_ritual_wh2_dlc16_anc_weapon_eagle_bow_4",
-            "pttg_ritual_wh2_dlc16_anc_weapon_twilight_spear_1",
-            "pttg_ritual_wh2_dlc16_anc_weapon_twilight_spear_2",
-            "pttg_ritual_wh2_dlc16_anc_weapon_twilight_spear_3",
-            "pttg_ritual_wh2_dlc16_anc_weapon_twilight_spear_4",
-            "pttg_ritual_wh2_dlc16_anc_weapon_witstealer_sword",
-            "pttg_ritual_wh2_dlc17_anc_weapon_fell_axe_of_the_drakwald",
-            "pttg_ritual_wh2_dlc17_anc_weapon_klad_brakak",
-            "pttg_ritual_wh2_dlc17_anc_weapon_rune_tortured_axes",
-            "pttg_ritual_wh2_dlc17_anc_weapon_the_golden_blowpipe_of_ptoohee",
-            "pttg_ritual_wh2_main_anc_weapon_aventurine_dagger",
-            "pttg_ritual_wh2_main_anc_weapon_blade_of_bel_korhadris",
-            "pttg_ritual_wh2_main_anc_weapon_blade_of_corruption",
-            "pttg_ritual_wh2_main_anc_weapon_blade_of_darting_steel",
-            "pttg_ritual_wh2_main_anc_weapon_blade_of_leaping_gold",
-            "pttg_ritual_wh2_main_anc_weapon_blade_of_nurglitch",
-            "pttg_ritual_wh2_main_anc_weapon_blade_of_revered_tzunki",
-            "pttg_ritual_wh2_main_anc_weapon_blade_of_ruin",
-            "pttg_ritual_wh2_main_anc_weapon_blade_of_sea_gold",
-            "pttg_ritual_wh2_main_anc_weapon_bow_of_the_seafarer",
-            "pttg_ritual_wh2_main_anc_weapon_burning_blade_of_chotec",
-            "pttg_ritual_wh2_main_anc_weapon_caledors_bane",
-            "pttg_ritual_wh2_main_anc_weapon_chillblade",
-            "pttg_ritual_wh2_main_anc_weapon_cobra_mace_of_mazdamundi",
-            "pttg_ritual_wh2_main_anc_weapon_crimson_death",
-            "pttg_ritual_wh2_main_anc_weapon_dagger_of_hotek",
-            "pttg_ritual_wh2_main_anc_weapon_dagger_of_sotek",
-            "pttg_ritual_wh2_main_anc_weapon_deathpiercer",
-            "pttg_ritual_wh2_main_anc_weapon_destroyer",
-            "pttg_ritual_wh2_main_anc_weapon_dwarf_gouger",
-            "pttg_ritual_wh2_main_anc_weapon_dwarfbane",
-            "pttg_ritual_wh2_main_anc_weapon_executioners_axe",
-            "pttg_ritual_wh2_main_anc_weapon_foe_bane",
-            "pttg_ritual_wh2_main_anc_weapon_heartrender_and_the_darksword",
-            "pttg_ritual_wh2_main_anc_weapon_heartseeker",
-            "pttg_ritual_wh2_main_anc_weapon_hydra_blade",
-            "pttg_ritual_wh2_main_anc_weapon_mechanical_claw",
-            "pttg_ritual_wh2_main_anc_weapon_reaver_bow",
-            "pttg_ritual_wh2_main_anc_weapon_revered_spear_of_tlanxla",
-            "pttg_ritual_wh2_main_anc_weapon_righteous_wrath",
-            "pttg_ritual_wh2_main_anc_weapon_rod_of_corruption",
-            "pttg_ritual_wh2_main_anc_weapon_scimitar_of_the_sun_resplendent",
-            "pttg_ritual_wh2_main_anc_weapon_sea_gold_parrying_blade",
-            "pttg_ritual_wh2_main_anc_weapon_stegadon_war_spear",
-            "pttg_ritual_wh2_main_anc_weapon_sunfang",
-            "pttg_ritual_wh2_main_anc_weapon_sword_of_teclis",
-            "pttg_ritual_wh2_main_anc_weapon_sword_of_the_hornet",
-            "pttg_ritual_wh2_main_anc_weapon_the_blade_of_realities",
-            "pttg_ritual_wh2_main_anc_weapon_the_fellblade",
-            "pttg_ritual_wh2_main_anc_weapon_the_piranha_blade",
-            "pttg_ritual_wh2_main_anc_weapon_the_white_sword",
-            "pttg_ritual_wh2_main_anc_weapon_venom_sword",
-            "pttg_ritual_wh2_main_anc_weapon_warlock_augmented_weapon",
-            "pttg_ritual_wh2_main_anc_weapon_warpforged_blade",
-            "pttg_ritual_wh2_main_anc_weapon_web_of_shadows",
-            "pttg_ritual_wh2_main_anc_weapon_weeping_blade",
-            "pttg_ritual_wh2_main_anc_weapon_winged_staff",
-            "pttg_ritual_wh2_main_anc_weapon_wrath_of_kurnous",
-            "pttg_ritual_wh2_pro08_anc_weapon_felix_sword",
-            "pttg_ritual_wh2_pro08_anc_weapon_gotrek_axe",
-            "pttg_ritual_wh2_twa03_anc_weapon_whip_of_agony",
-            "pttg_ritual_wh3_dlc20_anc_weapon_aether_sword",
-            "pttg_ritual_wh3_dlc20_anc_weapon_daemonblade",
-            "pttg_ritual_wh3_dlc20_anc_weapon_rapier_of_ecstasy",
-            "pttg_ritual_wh3_dlc20_anc_weapon_sword_of_change",
-            "pttg_ritual_wh3_dlc20_anc_weapon_the_spear_slaupnir",
-            "pttg_ritual_wh3_dlc23_anc_weapon_black_hammer_of_hashut",
-            "pttg_ritual_wh3_dlc23_anc_weapon_chd_dagger_of_malice",
-            "pttg_ritual_wh3_dlc23_anc_weapon_chd_the_obsidian_axe",
-            "pttg_ritual_wh3_dlc23_anc_weapon_dark_mace",
-            "pttg_ritual_wh3_dlc23_anc_weapon_item_silver_dagger",
-            "pttg_ritual_wh3_dlc23_anc_weapon_lesser_relic_of_gazul",
-            "pttg_ritual_wh3_dlc23_anc_weapon_lesser_relic_of_smednir",
-            "pttg_ritual_wh3_dlc23_anc_weapon_life_bane_blade",
-            "pttg_ritual_wh3_dlc23_anc_weapon_the_graven_sceptre",
-            "pttg_ritual_wh3_dlc24_anc_weapon_runefang",
-            "pttg_ritual_wh3_dlc24_anc_weapon_the_dragons_fang",
-            "pttg_ritual_wh3_dlc24_anc_weapon_the_windblade",
-            "pttg_ritual_wh3_dlc24_anc_weapon_ursuns_claw",
-            "pttg_ritual_wh3_dlc24_anc_weapon_weeping_blade",
-            "pttg_ritual_wh3_dlc24_anc_weapon_wind_bow",
-            "pttg_ritual_wh3_main_anc_weapon_ascendant_celestial_blade",
-            "pttg_ritual_wh3_main_anc_weapon_axe_of_khorne",
-            "pttg_ritual_wh3_main_anc_weapon_axe_of_tor",
-            "pttg_ritual_wh3_main_anc_weapon_bale_sword",
-            "pttg_ritual_wh3_main_anc_weapon_blade_of_blood",
-            "pttg_ritual_wh3_main_anc_weapon_blade_of_shadow",
-            "pttg_ritual_wh3_main_anc_weapon_blade_of_xen_wu",
-            "pttg_ritual_wh3_main_anc_weapon_blood_cleaver",
-            "pttg_ritual_wh3_main_anc_weapon_chainsword",
-            "pttg_ritual_wh3_main_anc_weapon_dawn_glaive",
-            "pttg_ritual_wh3_main_anc_weapon_dazhs_brazier",
-            "pttg_ritual_wh3_main_anc_weapon_etherblade",
-            "pttg_ritual_wh3_main_anc_weapon_firestorm_blade",
-            "pttg_ritual_wh3_main_anc_weapon_frost_fang",
-            "pttg_ritual_wh3_main_anc_weapon_frost_shard_glaive",
-            "pttg_ritual_wh3_main_anc_weapon_gilellions_soulnetter",
-            "pttg_ritual_wh3_main_anc_weapon_hellblade",
-            "pttg_ritual_wh3_main_anc_weapon_jade_blade_of_the_great_fleet",
-            "pttg_ritual_wh3_main_anc_weapon_lash_of_despair",
-            "pttg_ritual_wh3_main_anc_weapon_necrotic_missiles",
-            "pttg_ritual_wh3_main_anc_weapon_nuku_chos_crossbow",
-            "pttg_ritual_wh3_main_anc_weapon_plague_flail",
-            "pttg_ritual_wh3_main_anc_weapon_sceptre_of_titans",
-            "pttg_ritual_wh3_main_anc_weapon_serpent_fang",
-            "pttg_ritual_wh3_main_anc_weapon_shard_blade",
-            "pttg_ritual_wh3_main_anc_weapon_siegebreaker",
-            "pttg_ritual_wh3_main_anc_weapon_silver_moon_bow",
-            "pttg_ritual_wh3_main_anc_weapon_skars_kraken_killer",
-            "pttg_ritual_wh3_main_anc_weapon_skull_plucker",
-            "pttg_ritual_wh3_main_anc_weapon_slaaneshs_blade",
-            "pttg_ritual_wh3_main_anc_weapon_slaughter_and_carnage",
-            "pttg_ritual_wh3_main_anc_weapon_spirit_qilin_spear",
-            "pttg_ritual_wh3_main_anc_weapon_staff_of_change",
-            "pttg_ritual_wh3_main_anc_weapon_staff_of_nurgle",
-            "pttg_ritual_wh3_main_anc_weapon_the_bane_spear",
-            "pttg_ritual_wh3_main_anc_weapon_the_burning_brazier",
-            "pttg_ritual_wh3_main_anc_weapon_the_eternal_blade",
-            "pttg_ritual_wh3_main_anc_weapon_the_rime_blade",
-            "pttg_ritual_wh3_main_anc_weapon_the_tenderiser",
-            "pttg_ritual_wh3_main_anc_weapon_thundermace",
-            "pttg_ritual_wh3_main_anc_weapon_torment_blade",
-            "pttg_ritual_wh3_main_anc_weapon_ursuns_claws",
-            "pttg_ritual_wh3_main_anc_weapon_vermillion_blade",
-            "pttg_ritual_wh3_main_anc_weapon_vorpal_shard",
-            "pttg_ritual_wh3_main_anc_weapon_witstealer_sword",
-            "pttg_ritual_wh3_main_anc_weapon_wyrmspike",
-            "pttg_ritual_wh3_pro11_anc_weapon_hammer_of_harry",
-            "pttg_ritual_wh_dlc03_anc_weapon_axe_of_men",
-            "pttg_ritual_wh_dlc03_anc_weapon_axes_of_khorgor",
-            "pttg_ritual_wh_dlc03_anc_weapon_everbleed",
-            "pttg_ritual_wh_dlc03_anc_weapon_hunting_spear",
-            "pttg_ritual_wh_dlc03_anc_weapon_mangelder",
-            "pttg_ritual_wh_dlc03_anc_weapon_primeval_club",
-            "pttg_ritual_wh_dlc03_anc_weapon_scourge",
-            "pttg_ritual_wh_dlc03_anc_weapon_stonecrusher_mace",
-            "pttg_ritual_wh_dlc03_anc_weapon_the_brass_cleaver",
-            "pttg_ritual_wh_dlc03_anc_weapon_the_steel_claws",
-            "pttg_ritual_wh_dlc04_anc_weapon_blood_drinker",
-            "pttg_ritual_wh_dlc04_anc_weapon_staff_of_command",
-            "pttg_ritual_wh_dlc05_anc_weapon_daiths_reaper",
-            "pttg_ritual_wh_dlc05_anc_weapon_daiths_sword",
-            "pttg_ritual_wh_dlc05_anc_weapon_spear_of_kurnous",
-            "pttg_ritual_wh_dlc05_anc_weapon_the_bow_of_loren",
-            "pttg_ritual_wh_dlc05_anc_weapon_the_spirit_sword",
-            "pttg_ritual_wh_dlc06_anc_weapon_bonewood_staff",
-            "pttg_ritual_wh_dlc06_anc_weapon_skarsniks_prodder",
-            "pttg_ritual_wh_dlc06_anc_weapon_the_hammer_of_angrund",
-            "pttg_ritual_wh_dlc07_anc_weapon_sword_of_the_ladys_champion",
-            "pttg_ritual_wh_dlc07_anc_weapon_sword_of_the_quest",
-            "pttg_ritual_wh_dlc07_anc_weapon_the_silver_lance_of_the_blessed",
-            "pttg_ritual_wh_dlc07_anc_weapon_the_wyrmlance",
-            "pttg_ritual_wh_dlc07_anc_weapon_trident_of_manann",
-            "pttg_ritual_wh_dlc08_anc_weapon_fimir_hammer",
-            "pttg_ritual_wh_dlc08_anc_weapon_flaming_axe_of_cormac",
-            "pttg_ritual_wh_dlc08_anc_weapon_forest_dragon_fang",
-            "pttg_ritual_wh_dlc08_anc_weapon_stinky_giant_club",
-            "pttg_ritual_wh_dlc08_anc_weapon_sword_of_torgald",
-            "pttg_ritual_wh_dlc08_anc_weapon_troll_fang_dagger",
-            "pttg_ritual_wh_dlc13_anc_weapon_Stalker",
-            "pttg_ritual_wh_dlc13_anc_weapon_anguish_of_languille",
-            "pttg_ritual_wh_dlc13_anc_weapon_dawn",
-            "pttg_ritual_wh_main_anc_weapon_axe_of_dargo",
-            "pttg_ritual_wh_main_anc_weapon_bashas_axe_of_stunty_smashin",
-            "pttg_ritual_wh_main_anc_weapon_battleaxe_of_the_last_waaagh",
-            "pttg_ritual_wh_main_anc_weapon_berserker_sword",
-            "pttg_ritual_wh_main_anc_weapon_biting_blade",
-            "pttg_ritual_wh_main_anc_weapon_chaos_tomb_blade",
-            "pttg_ritual_wh_main_anc_weapon_fencers_blades",
-            "pttg_ritual_wh_main_anc_weapon_filth_mace",
-            "pttg_ritual_wh_main_anc_weapon_ghal_maraz",
-            "pttg_ritual_wh_main_anc_weapon_giant_blade",
-            "pttg_ritual_wh_main_anc_weapon_gitsnik",
-            "pttg_ritual_wh_main_anc_weapon_gold_sigil_sword",
-            "pttg_ritual_wh_main_anc_weapon_hellfire_sword",
-            "pttg_ritual_wh_main_anc_weapon_obsidian_blade",
-            "pttg_ritual_wh_main_anc_weapon_ogre_blade",
-            "pttg_ritual_wh_main_anc_weapon_red_axe_of_karak_eight_peaks",
-            "pttg_ritual_wh_main_anc_weapon_relic_sword",
-            "pttg_ritual_wh_main_anc_weapon_runefang",
-            "pttg_ritual_wh_main_anc_weapon_shrieking_blade",
-            "pttg_ritual_wh_main_anc_weapon_skabscrath",
-            "pttg_ritual_wh_main_anc_weapon_slaggas_slashas",
-            "pttg_ritual_wh_main_anc_weapon_sliverslash",
-            "pttg_ritual_wh_main_anc_weapon_starcrusher",
-            "pttg_ritual_wh_main_anc_weapon_stave_of_ruinous_corruption",
-            "pttg_ritual_wh_main_anc_weapon_sword_of_anti-heroes",
-            "pttg_ritual_wh_main_anc_weapon_sword_of_battle",
-            "pttg_ritual_wh_main_anc_weapon_sword_of_bloodshed",
-            "pttg_ritual_wh_main_anc_weapon_sword_of_might",
-            "pttg_ritual_wh_main_anc_weapon_sword_of_strife",
-            "pttg_ritual_wh_main_anc_weapon_sword_of_striking",
-            "pttg_ritual_wh_main_anc_weapon_sword_of_swift_slaying",
-            "pttg_ritual_wh_main_anc_weapon_sword_of_unholy_power",
-            "pttg_ritual_wh_main_anc_weapon_the_axe_of_grimnir",
-            "pttg_ritual_wh_main_anc_weapon_the_hammer_of_karak_drazh",
-            "pttg_ritual_wh_main_anc_weapon_the_mace_of_helsturm",
-            "pttg_ritual_wh_main_anc_weapon_the_middenland_runefang",
-            "pttg_ritual_wh_main_anc_weapon_the_slayer_of_kings",
-            "pttg_ritual_wh_main_anc_weapon_the_sword_of_couronne",
-            "pttg_ritual_wh_main_anc_weapon_tormentor_sword",
-            "pttg_ritual_wh_main_anc_weapon_warrior_bane",
-            "pttg_ritual_wh_pro01_anc_weapon_the_rune_axe_of_grombrindal"
-        },
-        pttg_crafting_armour = {
-            "pttg_ritual_wh2_dlc09_anc_armour_armour_armour_of_dawn",
-            "pttg_ritual_wh2_dlc09_anc_armour_armour_helmet_of_khsar",
-            "pttg_ritual_wh2_dlc09_anc_armour_armour_mortuary_robes",
-            "pttg_ritual_wh2_dlc09_anc_armour_armour_of_eternity",
-            "pttg_ritual_wh2_dlc09_anc_armour_armour_of_the_ages",
-            "pttg_ritual_wh2_dlc09_anc_armour_armour_shield_of_ptra",
-            "pttg_ritual_wh2_dlc09_anc_armour_armour_skull_cap_of_the_moon",
-            "pttg_ritual_wh2_dlc09_anc_armour_scorpion_armour",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_alriks_armour",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_dragon_slayers_scales",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_gate_keepers_helm",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_ironbeards_armour",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_ironwardens_shield",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_miners_helm",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_old_guards_armour",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_prospectors_mail",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_rangers_cloak",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_slayers_gauntlets",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_starmetal_plate",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_troll_slayers_hide",
-            "pttg_ritual_wh2_dlc10_dwf_anc_armour_veterans_armour",
-            "pttg_ritual_wh2_dlc11_anc_armour_armour_of_the_depth",
-            "pttg_ritual_wh2_dlc11_anc_armour_seadragon_buckler",
-            "pttg_ritual_wh2_dlc11_anc_armour_the_gunnarsson_kron",
-            "pttg_ritual_wh2_dlc12_anc_armour_alloy_shield",
-            "pttg_ritual_wh2_dlc12_anc_armour_brt_armour_of_brilliance",
-            "pttg_ritual_wh2_dlc12_anc_armour_glyph_of_potec",
-            "pttg_ritual_wh2_dlc12_anc_armour_iron_frame",
-            "pttg_ritual_wh2_dlc12_anc_armour_power_armour",
-            "pttg_ritual_wh2_dlc13_anc_armour_obsinite_plate",
-            "pttg_ritual_wh2_dlc13_anc_armour_the_shield_of_aeons",
-            "pttg_ritual_wh2_dlc14_anc_armour_the_cloak_of_shadows",
-            "pttg_ritual_wh2_dlc15_anc_armour_armour_of_caledor",
-            "pttg_ritual_wh2_dlc15_anc_armour_forest_dragon_special",
-            "pttg_ritual_wh2_dlc15_anc_armour_helm_of_yvresse",
-            "pttg_ritual_wh2_dlc16_anc_armour_dragon_cuirass_1",
-            "pttg_ritual_wh2_dlc16_anc_armour_dragon_cuirass_2",
-            "pttg_ritual_wh2_dlc16_anc_armour_dragon_cuirass_3",
-            "pttg_ritual_wh2_dlc16_anc_armour_dragon_cuirass_4",
-            "pttg_ritual_wh2_dlc16_anc_armour_dreaming_boots_1",
-            "pttg_ritual_wh2_dlc16_anc_armour_dreaming_boots_2",
-            "pttg_ritual_wh2_dlc16_anc_armour_dreaming_boots_3",
-            "pttg_ritual_wh2_dlc16_anc_armour_dreaming_boots_4",
-            "pttg_ritual_wh2_dlc16_anc_armour_eagle_vambraces_1",
-            "pttg_ritual_wh2_dlc16_anc_armour_eagle_vambraces_2",
-            "pttg_ritual_wh2_dlc16_anc_armour_eagle_vambraces_3",
-            "pttg_ritual_wh2_dlc16_anc_armour_eagle_vambraces_4",
-            "pttg_ritual_wh2_dlc16_anc_armour_great_stag_helm",
-            "pttg_ritual_wh2_dlc16_anc_armour_heartstone_of_athel_loren",
-            "pttg_ritual_wh2_dlc16_anc_armour_twilight_helm_1",
-            "pttg_ritual_wh2_dlc16_anc_armour_twilight_helm_2",
-            "pttg_ritual_wh2_dlc16_anc_armour_twilight_helm_3",
-            "pttg_ritual_wh2_dlc16_anc_armour_twilight_helm_4",
-            "pttg_ritual_wh2_dlc17_anc_armour_cloak_of_unreality",
-            "pttg_ritual_wh2_dlc17_anc_armour_mutated_ghorgon_hide",
-            "pttg_ritual_wh2_dlc17_anc_armour_thoreks_rune_armour",
-            "pttg_ritual_wh2_main_anc_armour_armour_of_caledor",
-            "pttg_ritual_wh2_main_anc_armour_armour_of_darkness",
-            "pttg_ritual_wh2_main_anc_armour_armour_of_eternal_servitude",
-            "pttg_ritual_wh2_main_anc_armour_armour_of_living_death",
-            "pttg_ritual_wh2_main_anc_armour_armour_of_midnight",
-            "pttg_ritual_wh2_main_anc_armour_armour_of_the_stars",
-            "pttg_ritual_wh2_main_anc_armour_boots_of_bracchus",
-            "pttg_ritual_wh2_main_anc_armour_chromatic_armour",
-            "pttg_ritual_wh2_main_anc_armour_cloak_of_hag_graef",
-            "pttg_ritual_wh2_main_anc_armour_crown_of_authority",
-            "pttg_ritual_wh2_main_anc_armour_dragon_armour_of_aenarion",
-            "pttg_ritual_wh2_main_anc_armour_dragonscale_shield",
-            "pttg_ritual_wh2_main_anc_armour_enchanted_ithilmar_breastplate",
-            "pttg_ritual_wh2_main_anc_armour_helm_of_fortune",
-            "pttg_ritual_wh2_main_anc_armour_helm_of_khaine",
-            "pttg_ritual_wh2_main_anc_armour_helm_of_the_kraken",
-            "pttg_ritual_wh2_main_anc_armour_hide_of_the_cold_ones",
-            "pttg_ritual_wh2_main_anc_armour_lions_pelt",
-            "pttg_ritual_wh2_main_anc_armour_rocket_boots",
-            "pttg_ritual_wh2_main_anc_armour_sacred_stegadon_helm_of_itza",
-            "pttg_ritual_wh2_main_anc_armour_shadow_armour",
-            "pttg_ritual_wh2_main_anc_armour_shield_of_distraction",
-            "pttg_ritual_wh2_main_anc_armour_shield_of_ghrond",
-            "pttg_ritual_wh2_main_anc_armour_shield_of_the_merwyrm",
-            "pttg_ritual_wh2_main_anc_armour_shield_of_the_mirrored_pool",
-            "pttg_ritual_wh2_main_anc_armour_shroud_of_death",
-            "pttg_ritual_wh2_main_anc_armour_skull_helmet",
-            "pttg_ritual_wh2_main_anc_armour_the_bane_shield",
-            "pttg_ritual_wh2_main_anc_armour_the_maiming_shield",
-            "pttg_ritual_wh2_main_anc_armour_war_crown_of_saphery",
-            "pttg_ritual_wh2_main_anc_armour_warp_shard_armour",
-            "pttg_ritual_wh2_main_anc_armour_warpstone_armour",
-            "pttg_ritual_wh2_main_anc_armour_winged_boots",
-            "pttg_ritual_wh2_main_anc_armour_worlds_edge_armour",
-            "pttg_ritual_wh2_twa03_anc_armour_beast_armour_of_karond_kar",
-            "pttg_ritual_wh3_dlc20_anc_armour_bronze_armour_of_zhrakk",
-            "pttg_ritual_wh3_dlc20_anc_armour_the_scarlet_armour",
-            "pttg_ritual_wh3_dlc23_anc_armour_armour_of_bazherak_the_cruel",
-            "pttg_ritual_wh3_dlc23_anc_armour_armour_of_the_forge",
-            "pttg_ritual_wh3_dlc23_anc_armour_blackshard_armour",
-            "pttg_ritual_wh3_dlc23_anc_armour_chd_armour_of_gazrakh",
-            "pttg_ritual_wh3_dlc23_anc_armour_lesser_relic_of_skavor",
-            "pttg_ritual_wh3_dlc23_anc_armour_major_relic_of_grungni",
-            "pttg_ritual_wh3_dlc24_anc_armour_armour_of_the_dragons_gaze",
-            "pttg_ritual_wh3_dlc24_anc_armour_horns_of_shang_yang",
-            "pttg_ritual_wh3_dlc24_anc_armour_scavenged_laboratory_materials",
-            "pttg_ritual_wh3_dlc24_anc_armour_storm_wind_coronal",
-            "pttg_ritual_wh3_dlc24_anc_armour_unknown_champions_cloak",
-            "pttg_ritual_wh3_main_anc_armour_armour_of_khorne",
-            "pttg_ritual_wh3_main_anc_armour_armour_of_ursun",
-            "pttg_ritual_wh3_main_anc_armour_ascendant_celestial_armour",
-            "pttg_ritual_wh3_main_anc_armour_bullgut",
-            "pttg_ritual_wh3_main_anc_armour_frost_shard_armour",
-            "pttg_ritual_wh3_main_anc_armour_fused_armour",
-            "pttg_ritual_wh3_main_anc_armour_great_bear_pelt",
-            "pttg_ritual_wh3_main_anc_armour_greatskull",
-            "pttg_ritual_wh3_main_anc_armour_gut_maw",
-            "pttg_ritual_wh3_main_anc_armour_iron_ice_armour",
-            "pttg_ritual_wh3_main_anc_armour_laminate_shield",
-            "pttg_ritual_wh3_main_anc_armour_mastodon_armour",
-            "pttg_ritual_wh3_main_anc_armour_null_plate",
-            "pttg_ritual_wh3_main_anc_armour_obsidian_armour",
-            "pttg_ritual_wh3_main_anc_armour_quicksilver_armour",
-            "pttg_ritual_wh3_main_anc_armour_robes_of_shang_yang",
-            "pttg_ritual_wh3_main_anc_armour_scales_of_the_celestial_court",
-            "pttg_ritual_wh3_main_anc_armour_shield_of_sacrifice",
-            "pttg_ritual_wh3_main_anc_armour_shield_of_the_nan_gau",
-            "pttg_ritual_wh3_main_anc_armour_the_crystal_cloak",
-            "pttg_ritual_wh3_main_anc_armour_void_armour",
-            "pttg_ritual_wh3_main_anc_armour_weird_plate",
-            "pttg_ritual_wh3_main_anc_armour_wyrm_harness",
-            "pttg_ritual_wh_dlc03_anc_armour_blackened_plate",
-            "pttg_ritual_wh_dlc03_anc_armour_pelt_of_the_shadowgave",
-            "pttg_ritual_wh_dlc03_anc_armour_ramhorn_helm",
-            "pttg_ritual_wh_dlc03_anc_armour_the_dark_mail",
-            "pttg_ritual_wh_dlc03_anc_armour_trollhide",
-            "pttg_ritual_wh_dlc05_anc_armour_the_helm_of_the_hunt",
-            "pttg_ritual_wh_dlc06_anc_armour_shield_of_defiance",
-            "pttg_ritual_wh_dlc07_anc_armour_armour_of_the_midsummer_sun",
-            "pttg_ritual_wh_dlc07_anc_armour_cuirass_of_fortune",
-            "pttg_ritual_wh_dlc07_anc_armour_gilded_cuirass",
-            "pttg_ritual_wh_dlc07_anc_armour_the_grail_shield",
-            "pttg_ritual_wh_dlc08_anc_armour_blood_stained_armour_of_morkar",
-            "pttg_ritual_wh_dlc08_anc_armour_helm_of_reavers",
-            "pttg_ritual_wh_dlc08_anc_armour_huskarl_plates",
-            "pttg_ritual_wh_dlc08_anc_armour_mammoth_hide_cape",
-            "pttg_ritual_wh_main_anc_armour_armour_of_destiny",
-            "pttg_ritual_wh_main_anc_armour_armour_of_fortune",
-            "pttg_ritual_wh_main_anc_armour_armour_of_gork",
-            "pttg_ritual_wh_main_anc_armour_armour_of_silvered_steel",
-            "pttg_ritual_wh_main_anc_armour_armour_of_templehof",
-            "pttg_ritual_wh_main_anc_armour_auric_armour",
-            "pttg_ritual_wh_main_anc_armour_azhags_ard_armour",
-            "pttg_ritual_wh_main_anc_armour_blood-forged_armour",
-            "pttg_ritual_wh_main_anc_armour_charmed_shield",
-            "pttg_ritual_wh_main_anc_armour_dragonhelm",
-            "pttg_ritual_wh_main_anc_armour_enchanted_shield",
-            "pttg_ritual_wh_main_anc_armour_gamblers_armour",
-            "pttg_ritual_wh_main_anc_armour_glittering_scales",
-            "pttg_ritual_wh_main_anc_armour_helm_of_discord",
-            "pttg_ritual_wh_main_anc_armour_helm_of_many_eyes",
-            "pttg_ritual_wh_main_anc_armour_magnificent_armour_of_borek_beetlebrow",
-            "pttg_ritual_wh_main_anc_armour_nightshroud",
-            "pttg_ritual_wh_main_anc_armour_shield_of_ptolos",
-            "pttg_ritual_wh_main_anc_armour_spellshield",
-            "pttg_ritual_wh_main_anc_armour_the_armour_of_meteoric_iron",
-            "pttg_ritual_wh_main_anc_armour_the_armour_of_morkar",
-            "pttg_ritual_wh_main_anc_armour_the_armour_of_skaldour",
-            "pttg_ritual_wh_main_anc_armour_the_lions_shield",
-            "pttg_ritual_wh_main_anc_armour_the_slayer_crown",
-            "pttg_ritual_wh_main_anc_armour_tricksters_helm",
-            "pttg_ritual_wh_pro01_anc_armour_armour_of_glimril_scales"
-        },
-        pttg_crafting_enchanted_items = {
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_brooch_of_the_great_desert",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_cloak_of_the_dunes",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_death_mask_of_kharnut",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_elixir_of_might",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_golden_deathmask_of_kharnut",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_hieratic_jar",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_icon_of_rulership",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_lucky_skullhelm",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_ouroboros",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_shroud_of_sokth",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_the_crown_of_nehekhara",
-            "pttg_ritual_wh2_dlc09_anc_enchanted_item_vambraces_of_the_sun",
-            "pttg_ritual_wh2_dlc10_anc_enchanted_item_burning_phoenix_pinion",
-            "pttg_ritual_wh2_dlc10_anc_enchanted_item_extinguished_phoenix_pinion",
-            "pttg_ritual_wh2_dlc10_anc_enchanted_item_star_of_avelorn",
-            "pttg_ritual_wh2_dlc10_anc_enchanted_item_the_shadow_crown",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_dragon_slayers_boots",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_gate_keepers_belt",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_horn_of_the_ancestors",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_ironbeards_bracers",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_ironwardens_tankard",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_miners_drinking_horn",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_old_guards_keg",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_prospectors_spyglass",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_rangers_brooch",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_sceptre_of_stone",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_slayers_belt",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_troll_slayers_gauntlets",
-            "pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_veterans_bracers",
-            "pttg_ritual_wh2_dlc11_anc_enchanted_item_black_buckthorns_treasure_map",
-            "pttg_ritual_wh2_dlc11_anc_enchanted_item_captain_roths_moondial",
-            "pttg_ritual_wh2_dlc11_anc_enchanted_item_moonshine",
-            "pttg_ritual_wh2_dlc11_anc_enchanted_item_pyrotechnic_compound",
-            "pttg_ritual_wh2_dlc11_anc_enchanted_item_slann_gold",
-            "pttg_ritual_wh2_dlc12_anc_enchanted_item_brt_braid_of_bordeleaux",
-            "pttg_ritual_wh2_dlc12_anc_enchanted_item_brt_morgianas_mirror",
-            "pttg_ritual_wh2_dlc12_anc_enchanted_item_golden_death_mask",
-            "pttg_ritual_wh2_dlc12_anc_enchanted_item_mask_of_heavens",
-            "pttg_ritual_wh2_dlc12_anc_enchanted_item_modulated_doomwheel_assembly_kit",
-            "pttg_ritual_wh2_dlc12_anc_enchanted_item_plaque_of_sotek",
-            "pttg_ritual_wh2_dlc12_anc_enchanted_item_warp_lightning_battery",
-            "pttg_ritual_wh2_dlc13_anc_enchanted_item_golden_tributes",
-            "pttg_ritual_wh2_dlc14_anc_enchanted_item_fleur_de_lys_banner",
-            "pttg_ritual_wh2_dlc14_anc_enchanted_item_malus_octagon_medallion",
-            "pttg_ritual_wh2_dlc14_anc_enchanted_item_malus_warp_gem",
-            "pttg_ritual_wh2_dlc15_anc_enchanted_item_lucky_banner",
-            "pttg_ritual_wh2_dlc15_anc_enchanted_item_star_dragon_special",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_acorns_of_the_oak_of_ages",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_ceithin_har_scale",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_dragon_pendant_1",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_dragon_pendant_2",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_dragon_pendant_3",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_dragon_pendant_4",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_dreaming_cloak_1",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_dreaming_cloak_2",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_dreaming_cloak_3",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_dreaming_cloak_4",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_eagle_quiver_1",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_eagle_quiver_2",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_eagle_quiver_3",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_eagle_quiver_4",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_fang_of_taalroth",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_twilight_standard_1",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_twilight_standard_2",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_twilight_standard_3",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_twilight_standard_4",
-            "pttg_ritual_wh2_dlc16_anc_enchanted_item_whip_of_domination",
-            "pttg_ritual_wh2_dlc17_anc_enchanted_item_blind_eye_of_seeing",
-            "pttg_ritual_wh2_main_anc_enchanted_item_black_dragon_egg",
-            "pttg_ritual_wh2_main_anc_enchanted_item_blessed_tome",
-            "pttg_ritual_wh2_main_anc_enchanted_item_blood_statuette_of_spite",
-            "pttg_ritual_wh2_main_anc_enchanted_item_box_of_eerie_noises",
-            "pttg_ritual_wh2_main_anc_enchanted_item_brass_horn",
-            "pttg_ritual_wh2_main_anc_enchanted_item_carnosaur_pendant",
-            "pttg_ritual_wh2_main_anc_enchanted_item_chest_of_sustenance",
-            "pttg_ritual_wh2_main_anc_enchanted_item_cloak_of_beards",
-            "pttg_ritual_wh2_main_anc_enchanted_item_cloak_of_twilight",
-            "pttg_ritual_wh2_main_anc_enchanted_item_curse_charm_of_tepok",
-            "pttg_ritual_wh2_main_anc_enchanted_item_divine_plaque_of_protection",
-            "pttg_ritual_wh2_main_anc_enchanted_item_dragonfly_of_quicksilver",
-            "pttg_ritual_wh2_main_anc_enchanted_item_dragonhorn",
-            "pttg_ritual_wh2_main_anc_enchanted_item_enchanted_spyglass",
-            "pttg_ritual_wh2_main_anc_enchanted_item_enriched_warpstone_dust",
-            "pttg_ritual_wh2_main_anc_enchanted_item_folariaths_robe",
-            "pttg_ritual_wh2_main_anc_enchanted_item_gilded_horn_of_galon_konook",
-            "pttg_ritual_wh2_main_anc_enchanted_item_hand_of_gods",
-            "pttg_ritual_wh2_main_anc_enchanted_item_heart_of_avelorn",
-            "pttg_ritual_wh2_main_anc_enchanted_item_khaines_ring_of_fury",
-            "pttg_ritual_wh2_main_anc_enchanted_item_moranions_wayshard",
-            "pttg_ritual_wh2_main_anc_enchanted_item_odd_powder_keg",
-            "pttg_ritual_wh2_main_anc_enchanted_item_pipes_of_piebald",
-            "pttg_ritual_wh2_main_anc_enchanted_item_portents_of_verminous_doom",
-            "pttg_ritual_wh2_main_anc_enchanted_item_radiant_gem_of_hoeth",
-            "pttg_ritual_wh2_main_anc_enchanted_item_ring_of_corin",
-            "pttg_ritual_wh2_main_anc_enchanted_item_ring_of_hukon",
-            "pttg_ritual_wh2_main_anc_enchanted_item_rod_of_briars",
-            "pttg_ritual_wh2_main_anc_enchanted_item_rubric_of_dark_dimensions",
-            "pttg_ritual_wh2_main_anc_enchanted_item_satchel_of_potions",
-            "pttg_ritual_wh2_main_anc_enchanted_item_scroll_of_hoeth",
-            "pttg_ritual_wh2_main_anc_enchanted_item_skalm",
-            "pttg_ritual_wh2_main_anc_enchanted_item_skavenbrew",
-            "pttg_ritual_wh2_main_anc_enchanted_item_supreme_spellshield",
-            "pttg_ritual_wh2_main_anc_enchanted_item_talisman_of_loec",
-            "pttg_ritual_wh2_main_anc_enchanted_item_the_book_of_the_phoenix",
-            "pttg_ritual_wh2_main_anc_enchanted_item_the_cloak_of_feathers",
-            "pttg_ritual_wh2_main_anc_enchanted_item_the_guiding_eye",
-            "pttg_ritual_wh2_main_anc_enchanted_item_the_horn_of_kygor",
-            "pttg_ritual_wh2_main_anc_enchanted_item_venom_of_the_firefly_frog",
-            "pttg_ritual_wh2_main_anc_enchanted_item_war_drum_of_xahutec",
-            "pttg_ritual_wh2_main_anc_enchanted_item_whip_of_agony",
-            "pttg_ritual_wh3_dlc20_anc_enchanted_item_blasphemous_amulet",
-            "pttg_ritual_wh3_dlc20_anc_enchanted_item_daemonshield",
-            "pttg_ritual_wh3_dlc20_anc_enchanted_item_doom_totem",
-            "pttg_ritual_wh3_dlc20_anc_enchanted_item_pestilent_potions",
-            "pttg_ritual_wh3_dlc20_anc_enchanted_item_the_beguiling_gem",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_chd_banner_of_slavery",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_chd_chaos_runeshield",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_daemon_flask_of_ashak",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_furnace_blast_gem",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_gauntlets_of_bazherak_the_cruel",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_lesser_relic_of_morgrim",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_major_relic_of_valaya",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_the_mask_of_the_furnace",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_the_vial_of_hashut",
-            "pttg_ritual_wh3_dlc24_anc_enchanted_item_blessed_helm_of_the_oblast",
-            "pttg_ritual_wh3_dlc24_anc_enchanted_item_book_of_secrets",
-            "pttg_ritual_wh3_dlc24_anc_enchanted_item_cauldron_of_power",
-            "pttg_ritual_wh3_dlc24_anc_enchanted_item_mirror_of_knowledge",
-            "pttg_ritual_wh3_dlc24_anc_enchanted_item_the_breath_of_life",
-            "pttg_ritual_wh3_dlc24_anc_enchanted_item_the_burning_vambraces",
-            "pttg_ritual_wh3_dlc24_anc_enchanted_item_totem_of_ursus",
-            "pttg_ritual_wh3_dlc24_anc_enchanted_item_vambraces_of_yin",
-            "pttg_ritual_wh3_main_anc_enchanted_item_alchemists_elixir_of_iron_skin",
-            "pttg_ritual_wh3_main_anc_enchanted_item_alchemists_elixir_of_puissance",
-            "pttg_ritual_wh3_main_anc_enchanted_item_alchemists_elixir_of_venom",
-            "pttg_ritual_wh3_main_anc_enchanted_item_alchemists_mask",
-            "pttg_ritual_wh3_main_anc_enchanted_item_astromancers_spyglass",
-            "pttg_ritual_wh3_main_anc_enchanted_item_balalaika_of_the_arari",
-            "pttg_ritual_wh3_main_anc_enchanted_item_bloodstone",
-            "pttg_ritual_wh3_main_anc_enchanted_item_brahmir_statue",
-            "pttg_ritual_wh3_main_anc_enchanted_item_catalytic_kiln",
-            "pttg_ritual_wh3_main_anc_enchanted_item_cauldron_of_the_great_maw",
-            "pttg_ritual_wh3_main_anc_enchanted_item_celestial_silk_robe",
-            "pttg_ritual_wh3_main_anc_enchanted_item_cleansing_water",
-            "pttg_ritual_wh3_main_anc_enchanted_item_cloak_of_the_moon_wind",
-            "pttg_ritual_wh3_main_anc_enchanted_item_crackleblaze",
-            "pttg_ritual_wh3_main_anc_enchanted_item_daemon_killer_scars",
-            "pttg_ritual_wh3_main_anc_enchanted_item_deaths_head",
-            "pttg_ritual_wh3_main_anc_enchanted_item_enthralling_musk",
-            "pttg_ritual_wh3_main_anc_enchanted_item_ever_full_kovsh",
-            "pttg_ritual_wh3_main_anc_enchanted_item_fan_of_the_magister",
-            "pttg_ritual_wh3_main_anc_enchanted_item_fistful_of_laurels",
-            "pttg_ritual_wh3_main_anc_enchanted_item_greyback_pelt",
-            "pttg_ritual_wh3_main_anc_enchanted_item_icon_of_the_spirit_dragon",
-            "pttg_ritual_wh3_main_anc_enchanted_item_jade_lion",
-            "pttg_ritual_wh3_main_anc_enchanted_item_jar_of_all_souls",
-            "pttg_ritual_wh3_main_anc_enchanted_item_kite_of_the_uttermost_airs",
-            "pttg_ritual_wh3_main_anc_enchanted_item_rock_eye",
-            "pttg_ritual_wh3_main_anc_enchanted_item_saint_annushkas_finger_bone",
-            "pttg_ritual_wh3_main_anc_enchanted_item_steppe_hunters_horn",
-            "pttg_ritual_wh3_main_anc_enchanted_item_the_chromatic_tome",
-            "pttg_ritual_wh3_main_anc_enchanted_item_the_portalglyph",
-            "pttg_ritual_wh3_main_anc_enchanted_item_the_rock_of_inevitability",
-            "pttg_ritual_wh3_pro11_anc_enchanted_item_bane_shield",
-            "pttg_ritual_wh_dlc03_anc_enchanted_item_horn_of_the_first_beast",
-            "pttg_ritual_wh_dlc03_anc_enchanted_item_icons_of_vilification",
-            "pttg_ritual_wh_dlc03_anc_enchanted_item_shard_of_the_herdstone",
-            "pttg_ritual_wh_dlc05_anc_enchanted_item_hail_of_doom_arrow",
-            "pttg_ritual_wh_dlc05_anc_enchanted_item_horn_of_the_wild_hunt",
-            "pttg_ritual_wh_dlc06_anc_enchanted_item_baleful_mask",
-            "pttg_ritual_wh_dlc07_anc_enchanted_item_holy_icon",
-            "pttg_ritual_wh_dlc07_anc_enchanted_item_mane_of_the_purebreed",
-            "pttg_ritual_wh_dlc08_anc_enchanted_item_ancient_frost_wyrm_scale",
-            "pttg_ritual_wh_dlc08_anc_enchanted_item_arachnarok_eggs",
-            "pttg_ritual_wh_dlc08_anc_enchanted_item_frost_wyrm_scale",
-            "pttg_ritual_wh_dlc08_anc_enchanted_item_great_horn_of_dragon_ogre",
-            "pttg_ritual_wh_dlc08_anc_enchanted_item_manticore_horn",
-            "pttg_ritual_wh_dlc08_anc_enchanted_item_vial_of_troll_blood",
-            "pttg_ritual_wh_dlc08_anc_enchanted_item_wintertooth_crown",
-            "pttg_ritual_wh_dlc13_anc_enchanted_item_band_of_loyalty",
-            "pttg_ritual_wh_dlc13_anc_enchanted_item_life_amulet",
-            "pttg_ritual_wh_main_anc_enchanted_item_chalice_of_chaos",
-            "pttg_ritual_wh_main_anc_enchanted_item_cloak_of_mists_and_shadows",
-            "pttg_ritual_wh_main_anc_enchanted_item_cloak_of_molten_metal",
-            "pttg_ritual_wh_main_anc_enchanted_item_crown_of_command",
-            "pttg_ritual_wh_main_anc_enchanted_item_featherfoe_torc",
-            "pttg_ritual_wh_main_anc_enchanted_item_fiery_ring_of_thori",
-            "pttg_ritual_wh_main_anc_enchanted_item_healing_potion",
-            "pttg_ritual_wh_main_anc_enchanted_item_ironcurse_icon",
-            "pttg_ritual_wh_main_anc_enchanted_item_pendant_of_slaanesh",
-            "pttg_ritual_wh_main_anc_enchanted_item_potion_of_foolhardiness",
-            "pttg_ritual_wh_main_anc_enchanted_item_potion_of_speed",
-            "pttg_ritual_wh_main_anc_enchanted_item_potion_of_strength",
-            "pttg_ritual_wh_main_anc_enchanted_item_potion_of_toughness",
-            "pttg_ritual_wh_main_anc_enchanted_item_rod_of_flaming_death",
-            "pttg_ritual_wh_main_anc_enchanted_item_ruby_ring_of_ruin",
-            "pttg_ritual_wh_main_anc_enchanted_item_silver_horn_of_vengeance",
-            "pttg_ritual_wh_main_anc_enchanted_item_skull_wand_of_kaloth",
-            "pttg_ritual_wh_main_anc_enchanted_item_the_crown_of_bretonnia",
-            "pttg_ritual_wh_main_anc_enchanted_item_the_crown_of_domination",
-            "pttg_ritual_wh_main_anc_enchanted_item_the_crown_of_sorcery",
-            "pttg_ritual_wh_main_anc_enchanted_item_the_great_book_of_grudges",
-            "pttg_ritual_wh_main_anc_enchanted_item_the_other_tricksters_shard",
-            "pttg_ritual_wh_main_anc_enchanted_item_the_terrifying_mask_of_eee",
-            "pttg_ritual_wh_main_anc_enchanted_item_van_horstmanns_speculum",
-            "pttg_ritual_wh_pro01_anc_enchanted_item_rune_helm_of_zhufbar",
-            "pttg_ritual_wh_pro02_anc_enchanted_item_blood_chalice_of_bathori"
-        },
-        pttg_crafting_talismans = {
-           "pttg_ritual_wh2_dlc09_anc_talisman_amulet_of_pha_stah",
-            "pttg_ritual_wh2_dlc09_anc_talisman_collar_of_shakkara",
-            "pttg_ritual_wh2_dlc09_anc_talisman_golden_ankhra",
-            "pttg_ritual_wh2_dlc09_anc_talisman_golden_eye_of_rah_nutt",
-            "pttg_ritual_wh2_dlc09_anc_talisman_obsidian_pendant",
-            "pttg_ritual_wh2_dlc09_anc_talisman_sun_scarab",
-            "pttg_ritual_wh2_dlc10_anc_talisman_amulet_of_dark_fire",
-            "pttg_ritual_wh2_dlc10_anc_talisman_carnosaur_skull",
-            "pttg_ritual_wh2_dlc10_anc_talisman_hydra_head",
-            "pttg_ritual_wh2_dlc10_anc_talisman_shieldstone_of_isha",
-            "pttg_ritual_wh2_dlc10_anc_talisman_stone_of_midnight",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_dragon_slayers_fang",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_gate_keepers_rat_catcher",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_ironbeards_ring",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_ironwardens_wardstone",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_miners_lattern",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_old_guards_tankard",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_prospectors_charge",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_rangers_pouch",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_ring_of_grimnir",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_slayers_ring",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_the_ankor_chain",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_the_ankor_chain_caravan",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_troll_slayers_amulet",
-            "pttg_ritual_wh2_dlc10_dwf_anc_talisman_veterans_flask",
-            "pttg_ritual_wh2_dlc11_anc_talisman_blackpearl_eye",
-            "pttg_ritual_wh2_dlc11_anc_talisman_jellyfish_in_a_jar",
-            "pttg_ritual_wh2_dlc11_anc_talisman_kraken_fang",
-            "pttg_ritual_wh2_dlc12_anc_talisman_amulet_of_itza",
-            "pttg_ritual_wh2_dlc12_anc_talisman_warp_field_generator",
-            "pttg_ritual_wh2_dlc13_anc_talisman_monoliths_shard",
-            "pttg_ritual_wh2_dlc13_anc_talisman_stadsraad_key",
-            "pttg_ritual_wh2_dlc13_anc_talisman_sylvania_journal",
-            "pttg_ritual_wh2_dlc13_talisman_the_ogham_shard",
-            "pttg_ritual_wh2_dlc14_anc_talisman_malus_amulet_of_defiance",
-            "pttg_ritual_wh2_dlc14_anc_talisman_malus_idol_of_darkness",
-            "pttg_ritual_wh2_dlc15_anc_talisman_sun_dragon_special",
-            "pttg_ritual_wh2_dlc15_anc_talisman_talisman_of_hoeth",
-            "pttg_ritual_wh2_dlc16_anc_talisman_berry_wine",
-            "pttg_ritual_wh2_dlc16_anc_talisman_dragon_mask_1",
-            "pttg_ritual_wh2_dlc16_anc_talisman_dragon_mask_2",
-            "pttg_ritual_wh2_dlc16_anc_talisman_dragon_mask_3",
-            "pttg_ritual_wh2_dlc16_anc_talisman_dragon_mask_4",
-            "pttg_ritual_wh2_dlc16_anc_talisman_dreaming_ring_1",
-            "pttg_ritual_wh2_dlc16_anc_talisman_dreaming_ring_2",
-            "pttg_ritual_wh2_dlc16_anc_talisman_dreaming_ring_3",
-            "pttg_ritual_wh2_dlc16_anc_talisman_dreaming_ring_4",
-            "pttg_ritual_wh2_dlc16_anc_talisman_eagle_mask_1",
-            "pttg_ritual_wh2_dlc16_anc_talisman_eagle_mask_2",
-            "pttg_ritual_wh2_dlc16_anc_talisman_eagle_mask_3",
-            "pttg_ritual_wh2_dlc16_anc_talisman_eagle_mask_4",
-            "pttg_ritual_wh2_dlc16_anc_talisman_twilight_horn_1",
-            "pttg_ritual_wh2_dlc16_anc_talisman_twilight_horn_2",
-            "pttg_ritual_wh2_dlc16_anc_talisman_twilight_horn_3",
-            "pttg_ritual_wh2_dlc16_anc_talisman_twilight_horn_4",
-            "pttg_ritual_wh2_dlc17_anc_talisman_champions_essence",
-            "pttg_ritual_wh2_dlc17_anc_talisman_shardstone_amulet",
-            "pttg_ritual_wh2_main_anc_enchanted_item_talisman_of_loec",
-            "pttg_ritual_wh2_main_anc_talisman_amber_amulet",
-            "pttg_ritual_wh2_main_anc_talisman_amulet_of_fire",
-            "pttg_ritual_wh2_main_anc_talisman_amulet_of_foresight",
-            "pttg_ritual_wh2_main_anc_talisman_amulet_of_itzl",
-            "pttg_ritual_wh2_main_anc_talisman_aura_of_quetzl",
-            "pttg_ritual_wh2_main_anc_talisman_crown_of_black_iron",
-            "pttg_ritual_wh2_main_anc_talisman_deathmask",
-            "pttg_ritual_wh2_main_anc_talisman_diamond_guardian_phoenix",
-            "pttg_ritual_wh2_main_anc_talisman_emerald_collar",
-            "pttg_ritual_wh2_main_anc_talisman_foul_pendant",
-            "pttg_ritual_wh2_main_anc_talisman_glyph_necklace",
-            "pttg_ritual_wh2_main_anc_talisman_golden_crown_of_atrazar",
-            "pttg_ritual_wh2_main_anc_talisman_loremasters_cloak",
-            "pttg_ritual_wh2_main_anc_talisman_pearl_of_infinite_blackness",
-            "pttg_ritual_wh2_main_anc_talisman_ring_of_darkness",
-            "pttg_ritual_wh2_main_anc_talisman_ring_of_hotek",
-            "pttg_ritual_wh2_main_anc_talisman_rival_hide_talisman",
-            "pttg_ritual_wh2_main_anc_talisman_ruby_guardian_phoenix",
-            "pttg_ritual_wh2_main_anc_talisman_sacred_incense",
-            "pttg_ritual_wh2_main_anc_talisman_sapphire_guardian_phoenix",
-            "pttg_ritual_wh2_main_anc_talisman_shadow_magnet_trinket",
-            "pttg_ritual_wh2_main_anc_talisman_talisman_of_saphery",
-            "pttg_ritual_wh2_main_anc_talisman_the_black_amulet",
-            "pttg_ritual_wh2_main_anc_talisman_vambraces_of_defence",
-            "pttg_ritual_wh3_dlc23_anc_talisman_black_gem_of_gnar",
-            "pttg_ritual_wh3_dlc23_anc_talisman_hellshard_amulet",
-            "pttg_ritual_wh3_dlc23_anc_talisman_lesser_relic_of_thungni",
-            "pttg_ritual_wh3_dlc23_anc_talisman_major_relic_of_grimnir",
-            "pttg_ritual_wh3_dlc23_anc_talisman_malignant_totem",
-            "pttg_ritual_wh3_dlc23_anc_talisman_possessed_amulet",
-            "pttg_ritual_wh3_dlc23_anc_talisman_stone_mantle",
-            "pttg_ritual_wh3_dlc23_anc_talisman_talisman_of_obsidian",
-            "pttg_ritual_wh3_dlc24_anc_talisman_blessing_wafers",
-            "pttg_ritual_wh3_dlc24_anc_talisman_corrupted_icon",
-            "pttg_ritual_wh3_dlc24_anc_talisman_facial_scruff",
-            "pttg_ritual_wh3_dlc24_anc_talisman_hellforge_flame",
-            "pttg_ritual_wh3_dlc24_anc_talisman_kraken_fang",
-            "pttg_ritual_wh3_dlc24_anc_talisman_magic_orb",
-            "pttg_ritual_wh3_dlc24_anc_talisman_pilfered_palanquin",
-            "pttg_ritual_wh3_dlc24_anc_talisman_the_golden_eye_of_tzeentch",
-            "pttg_ritual_wh3_dlc24_anc_talisman_tree_sap",
-            "pttg_ritual_wh3_dlc24_anc_talisman_undead_tome",
-            "pttg_ritual_wh3_main_anc_talisman_blizzard_broach",
-            "pttg_ritual_wh3_main_anc_talisman_blood_of_the_motherland",
-            "pttg_ritual_wh3_main_anc_talisman_cathayan_jet",
-            "pttg_ritual_wh3_main_anc_talisman_collar_of_khorne",
-            "pttg_ritual_wh3_main_anc_talisman_crystal_of_kunlan",
-            "pttg_ritual_wh3_main_anc_talisman_crystal_pendant",
-            "pttg_ritual_wh3_main_anc_talisman_fractured_clasp",
-            "pttg_ritual_wh3_main_anc_talisman_gnoblar_thiefstone",
-            "pttg_ritual_wh3_main_anc_talisman_greedy_fist",
-            "pttg_ritual_wh3_main_anc_talisman_jade_amulet",
-            "pttg_ritual_wh3_main_anc_talisman_jade_blood_pendant",
-            "pttg_ritual_wh3_main_anc_talisman_jet_amulet",
-            "pttg_ritual_wh3_main_anc_talisman_jewel_of_denial",
-            "pttg_ritual_wh3_main_anc_talisman_overtyrants_crown",
-            "pttg_ritual_wh3_main_anc_talisman_ring_of_sensation",
-            "pttg_ritual_wh3_main_anc_talisman_spangleshard",
-            "pttg_ritual_wh3_main_anc_talisman_spore_censer",
-            "pttg_ritual_wh3_main_anc_talisman_star_iron_ring",
-            "pttg_ritual_wh3_main_anc_talisman_tarnished_torque",
-            "pttg_ritual_wh3_main_anc_talisman_the_bloody_shackle",
-            "pttg_ritual_wh3_main_anc_talisman_vile_seed",
-            "pttg_ritual_wh3_main_anc_talisman_warp_mirror",
-            "pttg_ritual_wh3_main_anc_talisman_wyrdstone_necklace",
-            "pttg_ritual_wh_dlc03_anc_talisman_chalice_of_dark_rain",
-            "pttg_ritual_wh_dlc04_anc_talisman_jade_griffon",
-            "pttg_ritual_wh_dlc04_anc_talisman_the_carstein_ring",
-            "pttg_ritual_wh_dlc05_anc_talisman_cloak_of_isha",
-            "pttg_ritual_wh_dlc07_anc_talisman_dragons_claw",
-            "pttg_ritual_wh_dlc07_anc_talisman_siriennes_locket",
-            "pttg_ritual_wh_dlc08_anc_talisman_giant_cygor_eyeball",
-            "pttg_ritual_wh_dlc08_anc_talisman_headband_of_berserker",
-            "pttg_ritual_wh_dlc08_anc_talisman_lootbag_of_marauders",
-            "pttg_ritual_wh_dlc08_anc_talisman_slave_chain",
-            "pttg_ritual_wh_dlc08_anc_talisman_terrorgheist_skull",
-            "pttg_ritual_wh_dlc08_anc_talisman_wolf_teeth_amulet",
-            "pttg_ritual_wh_main_anc_talisman_amulet_of_sea_gold",
-            "pttg_ritual_wh_main_anc_talisman_dawnstone",
-            "pttg_ritual_wh_main_anc_talisman_dragon_cloak_of_fyrskar",
-            "pttg_ritual_wh_main_anc_talisman_dragonbane_gem",
-            "pttg_ritual_wh_main_anc_talisman_luckstone",
-            "pttg_ritual_wh_main_anc_talisman_obsidian_amulet",
-            "pttg_ritual_wh_main_anc_talisman_obsidian_lodestone",
-            "pttg_ritual_wh_main_anc_talisman_obsidian_trinket",
-            "pttg_ritual_wh_main_anc_talisman_opal_amulet",
-            "pttg_ritual_wh_main_anc_talisman_pidgeon_plucker_pendant",
-            "pttg_ritual_wh_main_anc_talisman_seed_of_rebirth",
-            "pttg_ritual_wh_main_anc_talisman_talisman_of_endurance",
-            "pttg_ritual_wh_main_anc_talisman_talisman_of_preservation",
-            "pttg_ritual_wh_main_anc_talisman_talisman_of_protection",
-            "pttg_ritual_wh_main_anc_talisman_the_dragon_crown_of_karaz",
-            "pttg_ritual_wh_main_anc_talisman_the_eye_of_sheerian",
-            "pttg_ritual_wh_main_anc_talisman_the_silver_seal",
-            "pttg_ritual_wh_main_anc_talisman_the_white_cloak_of_ulric",
-            "pttg_ritual_wh_pro01_anc_talisman_cloak_of_valaya",
-            "pttg_ritual_wh_dlc06_anc_rune_rune_of_fury",
-            "pttg_ritual_wh_dlc06_anc_rune_rune_of_might",
-            "pttg_ritual_wh_dlc06_anc_rune_rune_of_parrying",
-            "pttg_ritual_wh_dlc06_anc_rune_rune_of_striking",
-            "pttg_ritual_wh_main_anc_rune_ancestor_rune",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_battle",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_courage",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_dismay",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_groth_one-eye",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_grungni",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_sanctuary",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_stoicism",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_stromni_redbeard",
-            "pttg_ritual_wh_main_anc_rune_master_rune_of_valaya",
-            "pttg_ritual_wh_main_anc_rune_rune_of_fury",
-            "pttg_ritual_wh_main_anc_rune_rune_of_might",
-            "pttg_ritual_wh_main_anc_rune_rune_of_parrying",
-            "pttg_ritual_wh_main_anc_rune_rune_of_striking",
-            "pttg_ritual_wh_main_anc_rune_strollaz_rune",
-            "pttg_ritual_wh_pro01_anc_rune_rune_of_fury",
-            "pttg_ritual_wh_pro01_anc_rune_rune_of_might",
-            "pttg_ritual_wh_pro01_anc_rune_rune_of_parrying",
-            "pttg_ritual_wh_pro01_anc_rune_rune_of_striking" 
-        },
-        pttg_crafting_arcane_items = {
-            "pttg_ritual_wh2_dlc09_anc_arcane_item_blue_khepra",
-            "pttg_ritual_wh2_dlc09_anc_arcane_item_enkhils_kanopi",
-            "pttg_ritual_wh2_dlc09_anc_arcane_item_neferras_scrolls_of_mighty_incantations",
-            "pttg_ritual_wh2_dlc09_anc_arcane_item_staff_of_nagash",
-            "pttg_ritual_wh2_dlc09_anc_arcane_item_the_liche_staff",
-            "pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_arnizipals_black_horror",
-            "pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_assault_of_stone",
-            "pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_blast",
-            "pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_fear_of_aramar",
-            "pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_speed_of_lykos",
-            "pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_the_amber_trance",
-            "pttg_ritual_wh2_dlc10_anc_arcane_item_stave_of_avelorn",
-            "pttg_ritual_wh2_dlc11_anc_arcane_item_the_bordeleaux_flabellum",
-            "pttg_ritual_wh2_dlc12_anc_arcane_item_standard_of_the_sacred_serpent",
-            "pttg_ritual_wh2_dlc13_anc_arcane_item_amplifier",
-            "pttg_ritual_wh2_dlc15_anc_arcane_item_black_dragon_special",
-            "pttg_ritual_wh2_dlc15_anc_arcane_item_blacktoofs_head_in_a_jar",
-            "pttg_ritual_wh2_dlc16_anc_arcane_item_wand_of_wych_elm",
-            "pttg_ritual_wh2_main_anc_arcane_item_black_staff",
-            "pttg_ritual_wh2_main_anc_arcane_item_book_of_hoeth",
-            "pttg_ritual_wh2_main_anc_arcane_item_circlet_of_iron",
-            "pttg_ritual_wh2_main_anc_arcane_item_cube_of_darkness",
-            "pttg_ritual_wh2_main_anc_arcane_item_cupped_hands_of_the_old_ones",
-            "pttg_ritual_wh2_main_anc_arcane_item_darkstar_cloak",
-            "pttg_ritual_wh2_main_anc_arcane_item_diadem_of_power",
-            "pttg_ritual_wh2_main_anc_arcane_item_itxi_grubs",
-            "pttg_ritual_wh2_main_anc_arcane_item_jewel_of_the_dusk",
-            "pttg_ritual_wh2_main_anc_arcane_item_moon_staff_of_lileath",
-            "pttg_ritual_wh2_main_anc_arcane_item_plaque_of_dominion",
-            "pttg_ritual_wh2_main_anc_arcane_item_rod_of_the_storm",
-            "pttg_ritual_wh2_main_anc_arcane_item_scrying_stone",
-            "pttg_ritual_wh2_main_anc_arcane_item_staff_of_solidity",
-            "pttg_ritual_wh2_main_anc_arcane_item_starwood_staff",
-            "pttg_ritual_wh2_main_anc_arcane_item_the_gem_of_sunfire",
-            "pttg_ritual_wh2_main_anc_arcane_item_the_liber_bubonicus",
-            "pttg_ritual_wh2_main_anc_arcane_item_the_seerstaff_of_saphery",
-            "pttg_ritual_wh2_main_anc_arcane_item_the_tricksters_pendant",
-            "pttg_ritual_wh2_main_anc_arcane_item_the_vortex_shard",
-            "pttg_ritual_wh2_main_anc_arcane_item_tome_of_furion",
-            "pttg_ritual_wh2_main_anc_arcane_item_wand_of_the_kharaidon",
-            "pttg_ritual_wh2_main_anc_arcane_item_warp_energy_condenser",
-            "pttg_ritual_wh2_main_anc_arcane_item_warpstone_tokens",
-            "pttg_ritual_wh2_main_anc_arcane_item_warpstorm_scroll",
-            "pttg_ritual_wh3_dlc20_anc_arcane_item_rod_of_torment",
-            "pttg_ritual_wh3_dlc20_anc_arcane_item_vessel_of_chaos",
-            "pttg_ritual_wh3_dlc23_anc_arcane_item_blood_shard",
-            "pttg_ritual_wh3_dlc23_anc_arcane_item_chalice_of_blood_and_darkness",
-            "pttg_ritual_wh3_dlc23_anc_arcane_item_daemonspite_crucible",
-            "pttg_ritual_wh3_dlc23_anc_arcane_item_dweomer_leach_orb",
-            "pttg_ritual_wh3_dlc23_anc_arcane_item_spell_wrought_sceptre",
-            "pttg_ritual_wh3_dlc24_anc_arcane_item_alchemical_notes",
-            "pttg_ritual_wh3_dlc24_anc_arcane_item_captains_horn",
-            "pttg_ritual_wh3_dlc24_anc_arcane_item_corrupted_flame",
-            "pttg_ritual_wh3_dlc24_anc_arcane_item_crown_of_claws",
-            "pttg_ritual_wh3_dlc24_anc_arcane_item_ritual_of_the_beast",
-            "pttg_ritual_wh3_dlc24_anc_arcane_item_scrolls_of_sorcery",
-            "pttg_ritual_wh3_dlc24_anc_arcane_item_sentient_stormcloud",
-            "pttg_ritual_wh3_dlc24_anc_arcane_item_the_tricksters_staff",
-            "pttg_ritual_wh3_main_anc_arcane_item_abhorrent_lodestone",
-            "pttg_ritual_wh3_main_anc_arcane_item_bangstick",
-            "pttg_ritual_wh3_main_anc_arcane_item_cloak_of_po_mei",
-            "pttg_ritual_wh3_main_anc_arcane_item_gastuvas_egg",
-            "pttg_ritual_wh3_main_anc_arcane_item_gruts_sickle",
-            "pttg_ritual_wh3_main_anc_arcane_item_halfling_cookbook",
-            "pttg_ritual_wh3_main_anc_arcane_item_hellheart",
-            "pttg_ritual_wh3_main_anc_arcane_item_kairos_beasts",
-            "pttg_ritual_wh3_main_anc_arcane_item_kairos_death",
-            "pttg_ritual_wh3_main_anc_arcane_item_kairos_fire",
-            "pttg_ritual_wh3_main_anc_arcane_item_kairos_heavens",
-            "pttg_ritual_wh3_main_anc_arcane_item_kairos_life",
-            "pttg_ritual_wh3_main_anc_arcane_item_kairos_light",
-            "pttg_ritual_wh3_main_anc_arcane_item_kairos_metal",
-            "pttg_ritual_wh3_main_anc_arcane_item_kairos_shadows",
-            "pttg_ritual_wh3_main_anc_arcane_item_maw_shard",
-            "pttg_ritual_wh3_main_anc_arcane_item_mirror_of_the_ice_queen",
-            "pttg_ritual_wh3_main_anc_arcane_item_prismatic_amplifier",
-            "pttg_ritual_wh3_main_anc_arcane_item_rod_of_command",
-            "pttg_ritual_wh3_main_anc_arcane_item_sceptre_of_entropy",
-            "pttg_ritual_wh3_main_anc_arcane_item_scrolls_of_astromancy",
-            "pttg_ritual_wh3_main_anc_arcane_item_skullmantle",
-            "pttg_ritual_wh3_main_anc_arcane_item_snowflake_pendant",
-            "pttg_ritual_wh3_main_anc_arcane_item_staff_of_tomorrow",
-            "pttg_ritual_wh3_main_anc_arcane_item_staff_of_wu_xing",
-            "pttg_ritual_wh3_main_anc_arcane_item_void_pendulum",
-            "pttg_ritual_wh3_main_anc_arcane_item_wand_of_whimsey",
-            "pttg_ritual_wh_dlc03_anc_arcane_item_hagtree_fetish",
-            "pttg_ritual_wh_dlc03_anc_arcane_item_jagged_dagger",
-            "pttg_ritual_wh_dlc03_anc_arcane_item_skull_of_rarkos",
-            "pttg_ritual_wh_dlc03_anc_arcane_item_staff_of_darkoth",
-            "pttg_ritual_wh_dlc04_anc_arcane_item_the_liber_noctus",
-            "pttg_ritual_wh_dlc06_anc_arcane_item_squiggly_beast",
-            "pttg_ritual_wh_dlc07_anc_arcane_item_sacrament_of_the_lady",
-            "pttg_ritual_wh_dlc07_anc_arcane_item_the_chalice_of_potions",
-            "pttg_ritual_wh_main_anc_arcane_item_black_periapt",
-            "pttg_ritual_wh_main_anc_arcane_item_book_of_arkhan",
-            "pttg_ritual_wh_main_anc_arcane_item_book_of_ashur",
-            "pttg_ritual_wh_main_anc_arcane_item_channelling_staff",
-            "pttg_ritual_wh_main_anc_arcane_item_earthing_rod",
-            "pttg_ritual_wh_main_anc_arcane_item_forbidden_rod",
-            "pttg_ritual_wh_main_anc_arcane_item_lucky_shrunken_head",
-            "pttg_ritual_wh_main_anc_arcane_item_power_scroll",
-            "pttg_ritual_wh_main_anc_arcane_item_power_stone",
-            "pttg_ritual_wh_main_anc_arcane_item_sceptre_of_stability",
-            "pttg_ritual_wh_main_anc_arcane_item_scroll_of_leeching",
-            "pttg_ritual_wh_main_anc_arcane_item_scroll_of_shielding",
-            "pttg_ritual_wh_main_anc_arcane_item_skull_of_katam",
-            "pttg_ritual_wh_main_anc_arcane_item_skull_staff",
-            "pttg_ritual_wh_main_anc_arcane_item_staff_of_damnation",
-            "pttg_ritual_wh_main_anc_arcane_item_staff_of_volans",
-            "pttg_ritual_wh_main_anc_arcane_item_tricksters_shard",
-            "pttg_ritual_wh_main_anc_arcane_item_wand_of_jet"
-        },
-        pttg_crafting_banners = {
-            "pttg_ritual_wh2_dlc09_anc_magic_standard_banner_of_the_hidden_dead",
-            "pttg_ritual_wh2_dlc10_anc_magic_standard_banner_of_avelorn",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_bloodied_banner_of_slayers",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_burnt_banner_of_knights",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_holed_banner_of_militia",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_torn_banner_of_pilgrims",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_exalted_banner_of_xapati",
-            "pttg_ritual_wh2_dlc14_anc_banner_jean_claude_sartre",
-            "pttg_ritual_wh2_dlc14_anc_banner_pierre_darden",
-            "pttg_ritual_wh2_dlc14_anc_banner_rene_de_cartes",
-            "pttg_ritual_wh2_dlc14_anc_enchanted_item_fleur_de_lys_banner",
-            "pttg_ritual_wh2_dlc15_anc_enchanted_item_lucky_banner",
-            "pttg_ritual_wh2_dlc17_anc_banner_banner_of_madness",
-            "pttg_ritual_wh2_dlc17_anc_banner_banner_of_unholy_exultation",
-            "pttg_ritual_wh2_dlc17_anc_banner_bst_banner_of_ghorok",
-            "pttg_ritual_wh2_dlc17_anc_banner_lzd_poison_daemonbane",
-            "pttg_ritual_wh2_dlc17_anc_banner_lzd_poison_fireblood_toxin",
-            "pttg_ritual_wh2_dlc17_anc_banner_lzd_poison_slow_death",
-            "pttg_ritual_wh2_dlc17_anc_banner_lzd_poison_toadskin_essence",
-            "pttg_ritual_wh2_dlc17_anc_blessing_of_filth_banner",
-            "pttg_ritual_wh2_dlc17_anc_blessing_of_mania_banner",
-            "pttg_ritual_wh2_dlc17_anc_blessing_of_trickery_banner",
-            "pttg_ritual_wh2_dlc17_anc_dread_retainer_fimir_banner",
-            "pttg_ritual_wh2_dlc17_anc_dread_retainer_skinwolf_banner",
-            "pttg_ritual_wh2_dlc17_anc_dread_retainer_troll_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_ellyrion",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_murder",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_the_under_empire",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_the_world_dragon",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_verminous_scurrying",
-            "pttg_ritual_wh2_main_anc_magic_standard_battle_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_dread_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_dwarf_hide_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_grand_banner_of_clan_superiority",
-            "pttg_ritual_wh2_main_anc_magic_standard_hydra_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_sacred_banner_of_the_horned_rat",
-            "pttg_ritual_wh2_main_anc_magic_standard_skavenpelt_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_storm_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_the_blood_banner",
-            "pttg_ritual_wh3_dlc23_anc_banner_chd_banner_of_the_khanate",
-            "pttg_ritual_wh3_dlc23_anc_banner_chd_eye_of_hashut",
-            "pttg_ritual_wh3_dlc23_anc_banner_chd_hellbound_standard",
-            "pttg_ritual_wh3_dlc23_anc_banner_chd_hobgoblin_standard",
-            "pttg_ritual_wh3_dlc23_anc_banner_chd_oath_of_contempt",
-            "pttg_ritual_wh3_dlc23_anc_banner_chd_standard_of_zharr",
-            "pttg_ritual_wh3_dlc23_anc_enchanted_item_chd_banner_of_slavery",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_change",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_ecstacy",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_feng_shi",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_hellfire",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_praag",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_empress_eye",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_moon_empress",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_orthodoxy",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_unholy_victory",
-            "pttg_ritual_wh3_main_anc_magic_standard_blood_feasters_banner",
-            "pttg_ritual_wh3_main_anc_magic_standard_dragonhide_banner",
-            "pttg_ritual_wh3_main_anc_magic_standard_lifetaker_banner",
-            "pttg_ritual_wh3_main_anc_magic_standard_ragbanner",
-            "pttg_ritual_wh3_main_anc_magic_standard_revered_banner_of_the_ancestors",
-            "pttg_ritual_wh3_main_anc_magic_standard_the_great_celestial_banner",
-            "pttg_ritual_wh_dlc03_anc_magic_standard_banner_of_outrage",
-            "pttg_ritual_wh_dlc03_anc_magic_standard_banner_of_the_fallen_kings",
-            "pttg_ritual_wh_dlc03_anc_magic_standard_the_beast_banner",
-            "pttg_ritual_wh_dlc05_anc_magic_standard_the_banner_of_the_eternal_queen",
-            "pttg_ritual_wh_dlc05_anc_magic_standard_the_banner_of_the_hunter_king",
-            "pttg_ritual_wh_dlc07_anc_magic_standard_banner_of_defence",
-            "pttg_ritual_wh_dlc07_anc_magic_standard_errantry_banner",
-            "pttg_ritual_wh_dlc07_anc_magic_standard_twilight_banner",
-            "pttg_ritual_wh_dlc08_anc_magic_standard_banner_of_wolfclaw",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_eternal_flame",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_lost_holds",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_rage",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_swiftness",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_the_barrows",
-            "pttg_ritual_wh_main_anc_magic_standard_griffon_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_morks_war_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_scarecrow_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_spider_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_the_bad_moon_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_the_screaming_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_wailing_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_war_banner",
-            "pttg_ritual_wh2_dlc09_anc_magic_standard_banner_of_the_hidden_dead",
-            "pttg_ritual_wh2_dlc09_anc_magic_standard_standard_of_the_undying_legion",
-            "pttg_ritual_wh2_dlc10_anc_magic_standard_banner_of_avelorn",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_bloodied_banner_of_slayers",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_boatswain",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_burnt_banner_of_knights",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_corpse_surgeon",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_dead_mans_chest",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_holed_banner_of_militia",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_rookie_gunner",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_ships_colors",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_skull_and_crossbones",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_spell_of_the_necromancers_apprentice",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_throwing_bombs",
-            "pttg_ritual_wh2_dlc11_anc_magic_standard_torn_banner_of_pilgrims",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_cape_of_sniper",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_coatlpelt_flagstaff",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_culchan_feathered_standard",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_exalted_banner_of_xapati",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_flag_of_the_daystar",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_incendiary_rounds",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_shroud_of_chaqua",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_sign_of_the_coiled_one",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_totem_of_the_spitting_viper",
-            "pttg_ritual_wh2_dlc12_anc_magic_standard_totem_pole_of_destiny",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_ellyrion",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_murder",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_the_under_empire",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_the_world_dragon",
-            "pttg_ritual_wh2_main_anc_magic_standard_banner_of_verminous_scurrying",
-            "pttg_ritual_wh2_main_anc_magic_standard_battle_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_dread_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_dwarf_hide_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_grand_banner_of_clan_superiority",
-            "pttg_ritual_wh2_main_anc_magic_standard_horn_of_isha",
-            "pttg_ritual_wh2_main_anc_magic_standard_huanchis_blessed_totem",
-            "pttg_ritual_wh2_main_anc_magic_standard_hydra_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_lion_standard",
-            "pttg_ritual_wh2_main_anc_magic_standard_sacred_banner_of_the_horned_rat",
-            "pttg_ritual_wh2_main_anc_magic_standard_sea_serpent_standard",
-            "pttg_ritual_wh2_main_anc_magic_standard_shroud_of_dripping_death",
-            "pttg_ritual_wh2_main_anc_magic_standard_skavenpelt_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_standard_of_hag_graef",
-            "pttg_ritual_wh2_main_anc_magic_standard_storm_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_sun_standard_of_chotec",
-            "pttg_ritual_wh2_main_anc_magic_standard_sunburst_standard_of_hexoatl",
-            "pttg_ritual_wh2_main_anc_magic_standard_the_blood_banner",
-            "pttg_ritual_wh2_main_anc_magic_standard_the_jaguar_standard",
-            "pttg_ritual_wh2_main_anc_magic_standard_totem_of_prophecy",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_change",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_ecstacy",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_feng_shi",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_hellfire",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_praag",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_empress_eye",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_moon_empress",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_orthodoxy",
-            "pttg_ritual_wh3_main_anc_magic_standard_banner_of_unholy_victory",
-            "pttg_ritual_wh3_main_anc_magic_standard_bastion_standard",
-            "pttg_ritual_wh3_main_anc_magic_standard_blood_feasters_banner",
-            "pttg_ritual_wh3_main_anc_magic_standard_bull_standard",
-            "pttg_ritual_wh3_main_anc_magic_standard_cannibal_totem",
-            "pttg_ritual_wh3_main_anc_magic_standard_dragonhide_banner",
-            "pttg_ritual_wh3_main_anc_magic_standard_father_niklas_mantle",
-            "pttg_ritual_wh3_main_anc_magic_standard_flag_of_grand_cathay",
-            "pttg_ritual_wh3_main_anc_magic_standard_great_icon_of_despair",
-            "pttg_ritual_wh3_main_anc_magic_standard_great_standard_of_sundering",
-            "pttg_ritual_wh3_main_anc_magic_standard_icon_of_endless_war",
-            "pttg_ritual_wh3_main_anc_magic_standard_icon_of_eternal_virulence",
-            "pttg_ritual_wh3_main_anc_magic_standard_icon_of_sorcery",
-            "pttg_ritual_wh3_main_anc_magic_standard_khornes_gift",
-            "pttg_ritual_wh3_main_anc_magic_standard_lifetaker_banner",
-            "pttg_ritual_wh3_main_anc_magic_standard_ragbanner",
-            "pttg_ritual_wh3_main_anc_magic_standard_revered_banner_of_the_ancestors",
-            "pttg_ritual_wh3_main_anc_magic_standard_rune_maw",
-            "pttg_ritual_wh3_main_anc_magic_standard_serene_cloud_prayer_flag",
-            "pttg_ritual_wh3_main_anc_magic_standard_siren_standard",
-            "pttg_ritual_wh3_main_anc_magic_standard_skull_totem",
-            "pttg_ritual_wh3_main_anc_magic_standard_standard_of_chaos_glory",
-            "pttg_ritual_wh3_main_anc_magic_standard_standard_of_nan_gau",
-            "pttg_ritual_wh3_main_anc_magic_standard_standard_of_seeping_decay",
-            "pttg_ritual_wh3_main_anc_magic_standard_standard_of_shang_yang",
-            "pttg_ritual_wh3_main_anc_magic_standard_standard_of_the_empty_steppe",
-            "pttg_ritual_wh3_main_anc_magic_standard_standard_of_wei_jin",
-            "pttg_ritual_wh3_main_anc_magic_standard_the_great_celestial_banner",
-            "pttg_ritual_wh3_main_anc_magic_standard_trophy_of_killers",
-            "pttg_ritual_wh_dlc03_anc_magic_standard_banner_of_outrage",
-            "pttg_ritual_wh_dlc03_anc_magic_standard_banner_of_the_fallen_kings",
-            "pttg_ritual_wh_dlc03_anc_magic_standard_manbane_standard",
-            "pttg_ritual_wh_dlc03_anc_magic_standard_the_beast_banner",
-            "pttg_ritual_wh_dlc03_anc_magic_standard_totem_of_rust",
-            "pttg_ritual_wh_dlc05_anc_magic_standard_the_banner_of_the_eternal_queen",
-            "pttg_ritual_wh_dlc05_anc_magic_standard_the_banner_of_the_hunter_king",
-            "pttg_ritual_wh_dlc06_anc_magic_standard_skarsniks_boyz",
-            "pttg_ritual_wh_dlc07_anc_magic_standard_banner_of_defence",
-            "pttg_ritual_wh_dlc07_anc_magic_standard_errantry_banner",
-            "pttg_ritual_wh_dlc07_anc_magic_standard_twilight_banner",
-            "pttg_ritual_wh_dlc07_anc_magic_standard_valorous_standard",
-            "pttg_ritual_wh_dlc08_anc_magic_standard_ancient_mammoth_cub",
-            "pttg_ritual_wh_dlc08_anc_magic_standard_banner_of_wolfclaw",
-            "pttg_ritual_wh_dlc08_anc_magic_standard_black_iron_reavers",
-            "pttg_ritual_wh_dlc08_anc_magic_standard_crimson_reapers",
-            "pttg_ritual_wh_dlc08_anc_magic_standard_drake_hunters",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_eternal_flame",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_lost_holds",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_rage",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_swiftness",
-            "pttg_ritual_wh_main_anc_magic_standard_banner_of_the_barrows",
-            "pttg_ritual_wh_main_anc_magic_standard_blasted_standard",
-            "pttg_ritual_wh_main_anc_magic_standard_da_immortulz",
-            "pttg_ritual_wh_main_anc_magic_standard_gleaming_pennant",
-            "pttg_ritual_wh_main_anc_magic_standard_griffon_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_lichbone_pennant",
-            "pttg_ritual_wh_main_anc_magic_standard_morks_war_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_rampagers_standard",
-            "pttg_ritual_wh_main_anc_magic_standard_rangers_standard",
-            "pttg_ritual_wh_main_anc_magic_standard_razor_standard",
-            "pttg_ritual_wh_main_anc_magic_standard_scarecrow_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_spider_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_standard_of_discipline",
-            "pttg_ritual_wh_main_anc_magic_standard_steel_standard",
-            "pttg_ritual_wh_main_anc_magic_standard_the_bad_moon_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_the_screaming_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_wailing_banner",
-            "pttg_ritual_wh_main_anc_magic_standard_war_banner",
-            "pttg_ritual_wh_dlc03_anc_mark_of_chaos_crown_of_horns",
-            "pttg_ritual_wh_dlc03_anc_mark_of_chaos_gnarled_hide",
-            "pttg_ritual_wh_dlc03_anc_mark_of_chaos_gouge_tusks",
-            "pttg_ritual_wh_dlc03_anc_mark_of_chaos_many_limbed_fiend",
-            "pttg_ritual_wh_dlc03_anc_mark_of_chaos_shadow_hide",
-            "pttg_ritual_wh_dlc03_anc_mark_of_chaos_slug_skin",
-            "pttg_ritual_wh_dlc03_anc_mark_of_chaos_uncanny_senses",
-            "pttg_ritual_wh_main_anc_mark_of_chaos_mark_of_khorne",
-            "pttg_ritual_wh_main_anc_mark_of_chaos_mark_of_nurgle",
-            "pttg_ritual_wh_main_anc_mark_of_chaos_mark_of_slaanesh",
-            "pttg_ritual_wh_main_anc_mark_of_chaos_mark_of_tzeentch",
-            "pttg_ritual_wh2_dlc17_anc_blessing_of_filth_banner",
-            "pttg_ritual_wh2_dlc17_anc_blessing_of_mania_banner",
-            "pttg_ritual_wh2_dlc17_anc_blessing_of_trickery_banner"
-        }
-    },
-    ancillaries = {
-        
+    shop_items = {
+        merchandise = { {}, {}, {}, {} },
+        -- units = { {}, {}, {} }
     },
     active_shop_items = {
     },
@@ -1188,15 +11,29 @@ local pttg_glory_shop = {
     }
 }
 
-function pttg_glory_shop:add_ritual(ritual_key, crafting_group)
-    table.insert(pttg_glory_shop.rituals[crafting_group], ritual_key)
+function pttg_glory_shop:add_ritual(ritual, info)
+    pttg:log(string.format('[pttg_glory_shop] Adding ritual: %s (%s, %s, %s)',
+            ritual,
+            tostring(info.uniqueness),
+            tostring(info.category),
+            tostring(info.faction_set)
+        )
+    )
+    local crafting_group = "merchandise"
+    if info.category == 'unit' then
+        crafting_group = 'units'
+    end
+    local tier = self:item_tier(info.uniqueness)
+    if self.shop_items[crafting_group][tier][info.faction_set] then
+        table.insert(self.shop_items[crafting_group][tier][info.faction_set], ritual)
+    else
+        self.shop_items[crafting_group][tier][info.faction_set] = {ritual}
+    end
 end
 
-function pttg_glory_shop:add_ritual_list(rituals)
-    for _, ritual in pairs(rituals) do
-        local crafting_group = ritual[2]
-        local ritual_key = ritual[1]
-        table.insert(pttg_glory_shop.rituals[crafting_group], ritual_key)
+function pttg_glory_shop:add_rituals(rituals)
+    for ritual, info in pairs(rituals) do
+        self:add_ritual(ritual, info)
     end
 end
 
@@ -1212,7 +49,7 @@ end
 function pttg_glory_shop:unlock_ritual(ritual)
     pttg:log(string.format('[pttg_glory_shop]Unlocking ritual %s', ritual))
     local faction = cm:get_local_faction()
-    
+
     cm:unlock_ritual(faction, ritual, 1)
     self.active_shop_items[ritual] = true
     pttg:set_state('active_shop_items', self.active_shop_items)
@@ -1241,69 +78,1014 @@ end
 function pttg_glory_shop:lock_ritual(ritual)
     pttg:log(string.format('[pttg_glory_shop]Locking ritual %s', ritual))
     local faction = cm:get_local_faction()
-    
+
     cm:lock_ritual(faction, ritual)
     self.active_shop_items[ritual] = false
     pttg:set_state('active_shop_items', self.active_shop_items)
 end
 
+function pttg_glory_shop:item_tier(uniqueness)
+    -- wh2_dlc17_anc_group_rune	150	150
+    -- wh_main_anc_group_crafted	199	199
+
+    if uniqueness < 30 then -- wh_main_anc_group_common	29	0
+        return 1
+    elseif uniqueness < 50 then -- wh_main_anc_group_uncommon	49	30
+        return 2
+    elseif uniqueness < 100 then -- wh_main_anc_group_rare	100	50
+        return 3
+    else -- wh_main_anc_group_unique	200	200
+        return 4
+    end
+
+end
+
 function pttg_glory_shop:init_shop()
     local shop_sizes = pttg:get_state('shop_sizes')
 
-    pttg:log(string.format('[pttg_glory_shop] Initialising shop with(wep:%i,arm:%i,ench:%i,tal:%i,arc:%i,ban:%i)',
-            shop_sizes.pttg_crafting_weapons,
-            shop_sizes.pttg_crafting_armour,
-            shop_sizes.pttg_crafting_enchanted_items,
-            shop_sizes.pttg_crafting_talismans,
-            shop_sizes.pttg_crafting_arcane_items,
-            shop_sizes.pttg_crafting_banners
-        )
+    pttg:log(string.format('[pttg_glory_shop] Initialising shop with(merch: %i, units:%i)',
+            shop_sizes.merchandise,
+            shop_sizes.units)
     )
+
+    local items_all = { ["pttg_ritual_wh2_dlc10_dwf_anc_armour_gate_keepers_helm"] = { ["uniqueness"] = 75,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_weapon_warrior_bane"] = { ["uniqueness"] = 5,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_dragon_cuirass_4"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_balalaika_of_the_arari"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh3_main_anc_armour_shield_of_sacrifice"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_carnosaur_pendant"] = { ["uniqueness"] = 20,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_main_anc_talisman_amber_amulet"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_talisman_talisman_of_saphery"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_armour_boots_of_bracchus"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_the_tricksters_pendant"] = { ["uniqueness"] = 30,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_talisman_opal_amulet"] = { ["uniqueness"] = 15,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_veterans_bracers"] = { ["uniqueness"] = 15,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc03_anc_mark_of_chaos_uncanny_senses"] = { ["uniqueness"] = 10,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_serene_cloud_prayer_flag"] = { ["uniqueness"] = 30,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_weapon_dagger_of_sotek"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_dlc03_anc_magic_standard_totem_of_rust"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_golden_dagger"] = { ["uniqueness"] = 10,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc20_anc_weapon_rapier_of_ecstasy"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_boatswain"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh3_main_anc_weapon_firestorm_blade"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_standard_of_discipline"] = { ["uniqueness"] = 15,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_cleansing_water"] = { ["uniqueness"] = 65,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_banner_of_the_barrows"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_counts",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_eagle_quiver_2"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_stromni_redbeard"] = { ["uniqueness"] = 75,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_radiant_gem_of_hoeth"] = { ["uniqueness"] = 20,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_enchanted_lapis_mace"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_talisman_luckstone"] = { ["uniqueness"] = 5,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc23_anc_enchanted_item_gauntlets_of_bazherak_the_cruel"] = { ["uniqueness"] = 100,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_talisman_ring_of_hotek"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_warpforged_blade"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_dlc23_anc_enchanted_item_major_relic_of_valaya"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc23_anc_weapon_dark_mace"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_hydra_banner"] = { ["uniqueness"] = 80,["category"] = "general",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_crown_of_command"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc17_anc_armour_cloak_of_unreality"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc23_anc_armour_armour_of_bazherak_the_cruel"] = { ["uniqueness"] = 100,["category"] = "armour",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_bull_standard"] = { ["uniqueness"] = 5,["category"] = "general",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh3_main_anc_weapon_siegebreaker"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh3_main_anc_weapon_torment_blade"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_dlc11_anc_weapon_masamune"] = { ["uniqueness"] = 90,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_rune_maw"] = { ["uniqueness"] = 60,["category"] = "general",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_miners_pickaxe"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_dlc20_anc_weapon_aether_sword"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_the_jaguar_standard"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_dlc24_anc_armour_scavenged_laboratory_materials"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh3_main_anc_armour_wyrm_harness"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh_dlc08_anc_enchanted_item_vial_of_troll_blood"] = { ["uniqueness"] = 100,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_main_anc_weapon_web_of_shadows"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_void_pendulum"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_itxi_grubs"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_engineering_rune_of_penetration"] = { ["uniqueness"] = 10,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc03_anc_arcane_item_jagged_dagger"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_starwood_staff"] = { ["uniqueness"] = 40,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_dlc24_anc_armour_unknown_champions_cloak"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh3_prologue_anc_enchanted_item_saint_annushkas_finger_bone"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_sc_pro_kislev",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_banner_of_verminous_scurrying"] = { ["uniqueness"] = 10,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_wailing_banner"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc15_anc_arcane_item_blacktoofs_head_in_a_jar"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_greenskins",}
+    ,["pttg_ritual_wh3_main_anc_weapon_blade_of_blood"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_multi_khorne_daemons",}
+    ,["pttg_ritual_wh2_dlc12_anc_talisman_warp_field_generator"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_sanctuary"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_ruby_ring_of_ruin"] = { ["uniqueness"] = 25,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_the_seerstaff_of_saphery"] = { ["uniqueness"] = 30,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc09_anc_armour_armour_of_the_ages"] = { ["uniqueness"] = 40,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_diadem_of_power"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_warpstorm_scroll"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_rod_of_command"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_daemons_slaanesh",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_ring_of_hukon"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_lucky_shrunken_head"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_greenskins",}
+    ,["pttg_ritual_wh2_dlc09_anc_armour_armour_shield_of_ptra"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_armour_great_bear_pelt"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh3_main_anc_caravan_gryphon_legion_lance"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_armour_the_maiming_shield"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_tricksters_shard"] = { ["uniqueness"] = 30,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh3_dlc23_anc_armour_armour_of_the_forge"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_healing_potion"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_twilight_spear_1"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_talisman_loremasters_cloak"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_eagle_vambraces_1"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_rune_rune_of_might"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_weapon_chillblade"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_warp_energy_condenser"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_spider_banner"] = { ["uniqueness"] = 85,["category"] = "general",["faction_set"] = "anc_set_exclusive_sc_greenskins",}
+    ,["pttg_ritual_wh_main_anc_weapon_red_axe_of_karak_eight_peaks"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_armour_armour_of_caledor"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_standard_of_nan_gau"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_witstealer_sword"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_engineering_master_rune_of_disguise"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_dwarf_hide_banner"] = { ["uniqueness"] = 15,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_chalice_of_chaos"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_beastmen_chaos",}
+    ,["pttg_ritual_wh3_dlc24_anc_item_divining_rod"] = { ["uniqueness"] = 30,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_armour_quicksilver_armour"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_weapon_giant_blade"] = { ["uniqueness"] = 60,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_pendant_of_slaanesh"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_beastmen_chaos",}
+    ,["pttg_ritual_wh_main_anc_armour_armour_of_fortune"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_mirror_of_the_ice_queen"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_jade_lion"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_engineering_flakksons_rune_of_seeking"] = { ["uniqueness"] = 10,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_destroyer_of_eternities"] = { ["uniqueness"] = 80,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_totem_pole_of_destiny"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_armour_frost_shard_armour"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh_main_anc_rune_rune_of_striking"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc08_anc_talisman_slave_chain"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_twilight_spear_2"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_weapon_the_mace_of_helsturm"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_multi_kislev_empire",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_ancestor_rune_of_valaya"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_talisman_emerald_collar"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_weapon_dazhs_brazier"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_dragon_spear_2"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_dreaming_bow_4"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_rune_of_luck"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_dlc20_anc_arcane_item_rod_of_torment"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_rock_eye"] = { ["uniqueness"] = 5,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_potion_of_speed"] = { ["uniqueness"] = 5,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_armour_helm_of_khaine"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_weeping_blade"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_darkstar_cloak"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_prologue_anc_armour_frost_shard_armour"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_sc_pro_kislev",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_ironbeards_armour"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_axe_of_men"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc09_anc_armour_armour_armour_of_dawn"] = { ["uniqueness"] = 60,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_snowflake_pendant"] = { ["uniqueness"] = 35,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_praag"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_dragon_slayers_boots"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_ironbeards_ring"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_armour_shield_of_ptolos"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_ragbanner"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc12_anc_weapon_retractable_fistblade"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc09_anc_armour_armour_mortuary_robes"] = { ["uniqueness"] = 10,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_armour_armour_of_darkness"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc15_anc_talisman_sun_dragon_special"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc09_anc_arcane_item_enkhils_kanopi"] = { ["uniqueness"] = 75,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh3_main_anc_weapon_silver_moon_bow"] = { ["uniqueness"] = 55,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_dragon_spear_3"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_incendiary_rounds"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_dlc24_anc_enchanted_item_book_of_secrets"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_inscribed_khopesh"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_armour_shield_of_the_nan_gau"] = { ["uniqueness"] = 70,["category"] = "armour",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_armour_glittering_scales"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_armour_shield_of_distraction"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_talisman_obsidian_amulet"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc07_anc_magic_standard_twilight_banner"] = { ["uniqueness"] = 15,["category"] = "general",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_slayers_ring"] = { ["uniqueness"] = 15,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc08_anc_magic_standard_crimson_reapers"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh_dlc03_anc_mark_of_chaos_many_limbed_fiend"] = { ["uniqueness"] = 20,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_prologue_anc_talisman_blizzard_broach"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_sc_pro_kislev",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_twilight_horn_4"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_eagle_vambraces_3"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_sign_of_the_coiled_one"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_main_anc_weapon_gold_sigil_sword"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_maw_shard"] = { ["uniqueness"] = 30,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_power_stone"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_armour_shield_of_ghrond"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_main_anc_talisman_seed_of_rebirth"] = { ["uniqueness"] = 10,["category"] = "talisman",["faction_set"] = "anc_set_multi_kislev_bretonnia_dwarfs_empire_greenskins",}
+    ,["pttg_ritual_wh3_main_anc_weapon_etherblade"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_main_anc_armour_rocket_boots"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_golden_deathmask_of_kharnut"] = { ["uniqueness"] = 40,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_the_vortex_shard"] = { ["uniqueness"] = 75,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc17_anc_weapon_fell_axe_of_the_drakwald"] = { ["uniqueness"] = 10,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_armour_helm_of_many_eyes"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "anc_set_multi_beastmen_chaos",}
+    ,["pttg_ritual_wh3_dlc20_anc_item_the_festering_shroud"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh2_dlc11_anc_armour_armour_of_the_depth"] = { ["uniqueness"] = 90,["category"] = "armour",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_eagle_bow_2"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_magic_standard_manbane_standard"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_dlc23_anc_weapon_lesser_relic_of_smednir"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_death_mask_of_kharnut"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc23_anc_talisman_lesser_relic_of_thungni"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_weapon_filth_mace"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_multi_beastmen_chaos",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_rune_of_shielding"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_armour_armour_of_destiny"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_weapon_ursuns_claws"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_main_anc_armour_hide_of_the_cold_ones"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_weapon_vorpal_shard"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_master_rune_of_gromril"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_weapon_blade_of_darting_steel"] = { ["uniqueness"] = 45,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_enchanted_item_furnace_blast_gem"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_banner_of_lost_holds"] = { ["uniqueness"] = 40,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_black_dragon_egg"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_armour_major_relic_of_grungni"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_fistful_of_laurels"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc17_anc_talisman_champions_essence"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc15_anc_weapon_moon_dragon_special"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc09_anc_armour_armour_helmet_of_khsar"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_prologue_anc_talisman_star_iron_ring"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_sc_pro_kislev",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_unholy_victory"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_hunting_spear"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc14_anc_weapon_malus_death_warpsword"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc15_anc_enchanted_item_star_dragon_special"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_blade_of_setep"] = { ["uniqueness"] = 45,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_rangers_brooch"] = { ["uniqueness"] = 15,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_skavenpelt_banner"] = { ["uniqueness"] = 65,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_alchemists_elixir_of_puissance"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc12_anc_armour_power_armour"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_pipes_of_piebald"] = { ["uniqueness"] = 25,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc14_anc_banner_rene_de_cartes"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_weapon_slaaneshs_blade"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_the_blood_banner"] = { ["uniqueness"] = 10,["category"] = "general",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_old_guards_armour"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc14_anc_banner_jean_claude_sartre"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_drakwald"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_rune_of_impact"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc13_anc_talisman_sylvania_journal"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_caravan_frozen_pendant"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_talisman_jewel_of_denial"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_daemons_slaanesh",}
+    ,["pttg_ritual_wh2_main_anc_armour_chromatic_armour"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_weapon_the_middenland_runefang"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh_dlc08_anc_weapon_stinky_giant_club"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_weapon_ascendant_celestial_blade"] = { ["uniqueness"] = 60,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_the_rock_of_inevitability"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh_dlc08_anc_weapon_forest_dragon_fang"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_standard_of_the_empty_steppe"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_main_anc_armour_cloak_of_hag_graef"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_dlc08_anc_talisman_terrorgheist_skull"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_ostland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_change"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh_dlc08_anc_magic_standard_ancient_mammoth_cub"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh_dlc08_anc_enchanted_item_great_horn_of_dragon_ogre"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_rod_of_the_storm"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_dlc08_anc_enchanted_item_arachnarok_eggs"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh_dlc08_anc_enchanted_item_ancient_frost_wyrm_scale"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_main_anc_talisman_pearl_of_infinite_blackness"] = { ["uniqueness"] = 25,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_dragonhide_banner"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh_dlc07_anc_talisman_dragons_claw"] = { ["uniqueness"] = 20,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_main_anc_talisman_shadow_magnet_trinket"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_main_anc_armour_shield_of_the_merwyrm"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_caravan_warrant_of_trade"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_alchemists_mask"] = { ["uniqueness"] = 40,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_dlc03_anc_armour_blackened_plate"] = { ["uniqueness"] = 20,["category"] = "armour",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc09_anc_talisman_obsidian_pendant"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_weapon_sword_of_bloodshed"] = { ["uniqueness"] = 60,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_warpstone_tokens"] = { ["uniqueness"] = 15,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_dlc21_anc_rune_personal_master_rune_of_cleansing"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_talisman_sapphire_guardian_phoenix"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_caravan_statue_of_zharr"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_rune_rune_of_parrying"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_caravan_sky_titan_relic"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_caravan_luminark_lens"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_cathay_and_the_changeling",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_bangstick"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_shroud_of_sokth"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc09_anc_magic_standard_banner_of_the_hidden_dead"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_main_anc_weapon_mechanical_claw"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_dreaming_bow_2"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_talisman_obsidian_trinket"] = { ["uniqueness"] = 15,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_caravan_grant_of_land"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_ring_of_corin"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc10_anc_enchanted_item_extinguished_phoenix_pinion"] = { ["uniqueness"] = 60,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_banner_of_the_world_dragon"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_ironwardens_shield"] = { ["uniqueness"] = 75,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_caravan_frost_wyrm_skull"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc12_anc_enchanted_item_modulated_doomwheel_assembly_kit"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_main_anc_caravan_bejewelled_dagger"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_fear_of_aramar"] = { ["uniqueness"] = 45,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_high_elves_kislev_norsca_chaos_empire",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_daemon_killer_scars"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_orthodoxy"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_sc_kislev",}
+    ,["pttg_ritual_wh_dlc07_anc_armour_the_grail_shield"] = { ["uniqueness"] = 80,["category"] = "armour",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_tracer_rounds"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_trollslayer_axe"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_armour_shroud_of_death"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_staff_of_damnation"] = { ["uniqueness"] = 40,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_vampire_counts",}
+    ,["pttg_ritual_wh2_main_anc_talisman_crown_of_black_iron"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_axes_of_khorgor"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_speed_of_lykos"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_tomb_kings_vampire_coast_dark_elves_high_elves_kislev_empire_vampire_counts",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_dreaming_bow_1"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_war_drum_of_xahutec"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_crackleblaze"] = { ["uniqueness"] = 70,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_ironbeards_axe"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_dlc24_anc_talisman_undead_tome"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_cloak_of_po_mei"] = { ["uniqueness"] = 65,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_dlc24_anc_talisman_tree_sap"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh3_dlc24_anc_talisman_pilfered_palanquin"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_veterans_hammer"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_weapon_axe_of_tor"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh_main_anc_mark_of_chaos_mark_of_tzeentch"] = { ["uniqueness"] = 30,["category"] = "general",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh2_dlc09_anc_armour_armour_of_eternity"] = { ["uniqueness"] = 55,["category"] = "armour",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh3_dlc24_anc_talisman_hellforge_flame"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_van_horstmanns_speculum"] = { ["uniqueness"] = 40,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_kislev_empire",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_black_periapt"] = { ["uniqueness"] = 55,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_vampire_counts",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_veterans_armour"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_rune_of_fire"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_the_guiding_eye"] = { ["uniqueness"] = 25,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_dragon_pendant_3"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_dlc24_anc_arcane_item_ritual_of_the_beast"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_lore_of_beasts",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_grungni"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_divine_plaque_of_protection"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_main_anc_talisman_amulet_of_fire"] = { ["uniqueness"] = 20,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_armour_null_plate"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_main_anc_armour_armour_of_the_stars"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_talisman_star_iron_ring"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_main_anc_talisman_aura_of_quetzl"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_dlc24_anc_arcane_item_alchemical_notes"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh3_main_anc_talisman_tarnished_torque"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh3_main_anc_weapon_plague_flail"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_horn_of_isha"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_everchanging_shield"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_rubric_of_dark_dimensions"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_spiked_whip"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_fang_of_quaph"] = { ["uniqueness"] = 20,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_skavenbrew"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_ring_of_thorns"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_twilight_standard_3"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_weapon_skabscrath"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_vampire_counts",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_radiating_spike"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_dreaming_boots_1"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_book_of_arkhan"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_vampire_counts",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_stoicism"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_orc_shaman"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_dreaming_boots_4"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_dlc20_anc_item_armour_of_damnation"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh2_dlc09_anc_talisman_collar_of_shakkara"] = { ["uniqueness"] = 55,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc14_anc_enchanted_item_malus_warp_gem"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_talisman_foul_pendant"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_everlasting_glacier"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_weapon_thundermace"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_plaque_of_dominion"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc09_anc_talisman_amulet_of_pha_stah"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_eternal_servant"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_armour_helm_of_fortune"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_armour_worlds_edge_armour"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_crown_of_skulls"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_skullmantle"] = { ["uniqueness"] = 35,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_eagle_bow_3"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_weapon_sword_of_might"] = { ["uniqueness"] = 20,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_bones_of_the_maw"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_dragon_mask_1"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_dlc08_anc_armour_huskarl_plates"] = { ["uniqueness"] = 100,["category"] = "armour",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_master_rune_of_snorri_spangelhelm"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_totem_of_prophecy"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_master_rune_of_skalf_blackhammer"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_master_rune_of_passage"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_armour_dragonhelm"] = { ["uniqueness"] = 10,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc23_anc_enchanted_item_lesser_relic_of_morgrim"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_weapon_wyrmspike"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh3_dlc23_anc_arcane_item_dweomer_leach_orb"] = { ["uniqueness"] = 100,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_master_rune_of_adamant"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_armour_greatskull"] = { ["uniqueness"] = 5,["category"] = "armour",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc17_anc_armour_mutated_ghorgon_hide"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_master_rune_alaric_the_mad"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc03_anc_magic_standard_banner_of_outrage"] = { ["uniqueness"] = 20,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_ancestor_rune_of_grimnir"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_talisman_crystal_of_kunlan"] = { ["uniqueness"] = 55,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_engineering_master_rune_of_immolation"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_dragon_cuirass_2"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_double_crescent_of_neru"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_weapon_shrieking_blade"] = { ["uniqueness"] = 10,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_starbreaker"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_dreaming_bow_3"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_twilight_horn_3"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_weapon_ogre_blade"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_eagle_mask_3"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_dreaming_ring_3"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_warlock_augmented_weapon"] = { ["uniqueness"] = 45,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_main_anc_weapon_hydra_blade"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_dwarfbane"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_dragon_mask_3"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_dragon_slayers_axe"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_banner_of_rage"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_multi_beastmen_chaos",}
+    ,["pttg_ritual_wh2_main_anc_talisman_glyph_necklace"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_wand_of_whimsey"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_eagle_quiver_3"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_blade_of_antarhak"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_dreaming_cloak_3"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_ouroboros"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc07_anc_armour_cuirass_of_fortune"] = { ["uniqueness"] = 10,["category"] = "armour",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_main_anc_armour_warpstone_armour"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_great_stag_helm"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_dreaming_boots_3"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_dragon_cuirass_3"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_totem_of_the_spitting_viper"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_dragon_slayers_scales"] = { ["uniqueness"] = 75,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_potion_of_strength"] = { ["uniqueness"] = 20,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc15_anc_arcane_item_black_dragon_special"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_whip_of_agony"] = { ["uniqueness"] = 25,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc14_anc_weapon_malus_dagger_of_souls"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_master_rune_of_flight"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_bloodstone"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_khorne_daemons",}
+    ,["pttg_ritual_wh2_dlc14_anc_talisman_malus_amulet_of_defiance"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_mirror_blade"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_the_ankor_chain"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_prospectors_mail"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_wissenland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh3_dlc23_anc_talisman_possessed_amulet"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_armour_armour_of_silvered_steel"] = { ["uniqueness"] = 45,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc03_anc_magic_standard_the_beast_banner"] = { ["uniqueness"] = 75,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_stirland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_vambraces_of_the_sun"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_dragon_pendant_2"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_weapon_vermillion_blade"] = { ["uniqueness"] = 70,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_weapon_crimson_death"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_engineering_rune_of_burning"] = { ["uniqueness"] = 10,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_talisman_golden_crown_of_atrazar"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_talisman_warp_mirror"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_hochland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_prospectors_spyglass"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc08_anc_talisman_giant_cygor_eyeball"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_hieratic_jar"] = { ["uniqueness"] = 20,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh3_main_anc_talisman_the_bloody_shackle"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_khorne_daemons",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_nordland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_middenland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_scar"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_averland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_old_guards_keg"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_weapon_the_rime_blade"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh_main_anc_weapon_hellfire_sword"] = { ["uniqueness"] = 45,["category"] = "weapon",["faction_set"] = "anc_set_multi_beastmen_chaos",}
+    ,["pttg_ritual_wh2_dlc13_anc_arcane_item_amplifier"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_ecstacy"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_daemons_slaanesh",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_elfbane"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_rune_of_fear"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_the_ankor_chain_caravan"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_armour_armour_of_living_death"] = { ["uniqueness"] = 100,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_flag_of_grand_cathay"] = { ["uniqueness"] = 90,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_dlc07_anc_arcane_item_sacrament_of_the_lady"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_great_icon_of_despair"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_dlc14_anc_enchanted_item_malus_octagon_medallion"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_ring_of_grimnir"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_anc_magic_standard_banner_of_avelorn"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_arcane_item_hagtree_fetish"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_sceptre_of_stone"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_horn_of_the_ancestors"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_starmetal_plate"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_alriks_armour"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_anc_weapon_warptech_arsenal"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_talisman_spangleshard"] = { ["uniqueness"] = 25,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc10_anc_talisman_hydra_head"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_weapon_spirit_qilin_spear"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_talisman_blizzard_broach"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_dreaming_ring_2"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_talisman_of_loec"] = { ["uniqueness"] = 10,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_scrolls_of_astromancy"] = { ["uniqueness"] = 30,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_dlc23_anc_arcane_item_chalice_of_blood_and_darkness"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "chaos_dwarfs",}
+    ,["pttg_ritual_wh_dlc08_anc_weapon_flaming_axe_of_cormac"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_weapon_dawn_glaive"] = { ["uniqueness"] = 80,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_weapon_bale_sword"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh3_main_anc_weapon_nuku_chos_crossbow"] = { ["uniqueness"] = 65,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_talisman_gnoblar_thiefstone"] = { ["uniqueness"] = 45,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_blast"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_dlc09_anc_armour_scorpion_armour"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh_dlc05_anc_magic_standard_the_banner_of_the_eternal_queen"] = { ["uniqueness"] = 100,["category"] = "general",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_winged_staff"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_rod_of_flaming_death"] = { ["uniqueness"] = 40,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_vampire_counts",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_dead_mans_chest"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_main_anc_weapon_venom_sword"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_portents_of_verminous_doom"] = { ["uniqueness"] = 20,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_icon_of_sorcery"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh_dlc05_anc_enchanted_item_hail_of_doom_arrow"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_book_of_hoeth"] = { ["uniqueness"] = 55,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_blood_statuette_of_spite"] = { ["uniqueness"] = 25,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_main_anc_weapon_blade_of_sea_gold"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_caravan_von_carstein_blade"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_cathay_and_the_changeling",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_eagle_vambraces_4"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_talisman_diamond_guardian_phoenix"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_banner_of_ellyrion"] = { ["uniqueness"] = 15,["category"] = "general",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_talisman_amulet_of_foresight"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_talisman_chalice_of_dark_rain"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_dlc24_anc_talisman_kraken_fang"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_steel_standard"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_kislev_empire",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_chest_of_sustenance"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_sun_standard_of_chotec"] = { ["uniqueness"] = 40,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_channelling_staff"] = { ["uniqueness"] = 15,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_blessed_tome"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_armour_winged_boots"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_armour_laminate_shield"] = { ["uniqueness"] = 45,["category"] = "armour",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_old_guards_hammer"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_armour_crown_of_authority"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_cupped_hands_of_the_old_ones"] = { ["uniqueness"] = 45,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc17_anc_talisman_shardstone_amulet"] = { ["uniqueness"] = 10,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc09_anc_armour_armour_skull_cap_of_the_moon"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_rune_ancestor_rune"] = { ["uniqueness"] = 20,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_dlc20_anc_enchanted_item_doom_totem"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh2_main_anc_weapon_blade_of_ruin"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_dlc05_anc_weapon_the_spirit_sword"] = { ["uniqueness"] = 85,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_dlc07_anc_weapon_sword_of_the_quest"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_twilight_spear_4"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_mark_of_chaos_mark_of_slaanesh"] = { ["uniqueness"] = 15,["category"] = "general",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_eagle_bow_4"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_the_cloak_of_feathers"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_main_anc_talisman_the_white_cloak_of_ulric"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_kislev_empire",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_everbleed"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_fiery_ring_of_thori"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_dlc24_anc_enchanted_item_blessed_helm_of_the_oblast"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_astromancers_spyglass"] = { ["uniqueness"] = 1,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_dragon_spear_4"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_venom_of_the_firefly_frog"] = { ["uniqueness"] = 10,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_khornes_gift"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_sc_khorne",}
+    ,["pttg_ritual_wh2_dlc12_anc_weapon_mechanical_arm"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc11_anc_weapon_lucky_levis_hookhand"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_icon_of_endless_war"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_khorne_daemons",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_dragon_mask_4"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_skalm"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_main_anc_armour_the_bane_shield"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_the_amber_trance"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_high_elves_kislev_wood_elves_bretonnia_empire",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_banner_of_the_under_empire"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_the_terrifying_mask_of_eee"] = { ["uniqueness"] = 25,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_twilight_horn_2"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_icon_of_the_spirit_dragon"] = { ["uniqueness"] = 45,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_grand_banner_of_clan_superiority"] = { ["uniqueness"] = 30,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_eagle_quiver_4"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_dreaming_cloak_4"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_weapon_staff_of_change"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh3_main_anc_weapon_frost_shard_glaive"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_dragon_pendant_4"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_feng_shi"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_standard_of_seeping_decay"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_throwing_bombs"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_twilight_standard_2"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_enchanted_item_daemon_flask_of_ashak"] = { ["uniqueness"] = 100,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_dreaming_boots_2"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_miners_lattern"] = { ["uniqueness"] = 15,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_gate_keepers_belt"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_talisman_ruby_guardian_phoenix"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_obedient_mutant"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_weapon_wrath_of_kurnous"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_weapon_righteous_wrath"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_weapon_aventurine_dagger"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_icon_of_rulership"] = { ["uniqueness"] = 5,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_armour_armour_of_gork"] = { ["uniqueness"] = 100,["category"] = "armour",["faction_set"] = "anc_set_exclusive_greenskins",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_rod_of_briars"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_odd_powder_keg"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_shroud_of_chaqua"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_jewel_of_the_dusk"] = { ["uniqueness"] = 199,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_siren_standard"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_daemons_slaanesh",}
+    ,["pttg_ritual_wh2_dlc09_anc_talisman_sun_scarab"] = { ["uniqueness"] = 20,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_box_of_eerie_noises"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc20_anc_item_crown_of_everlasting_conquest"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_celestial_silk_robe"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_talisman_ring_of_darkness"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_ironwardens_wardstone"] = { ["uniqueness"] = 75,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_rangers_hammer"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc13_anc_talisman_stadsraad_key"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_ceithin_har_scale"] = { ["uniqueness"] = 100,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc12_anc_enchanted_item_warp_lightning_battery"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_weapon_battleaxe_of_the_last_waaagh"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_greenskins",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_battle"] = { ["uniqueness"] = 100,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_morks_war_banner"] = { ["uniqueness"] = 100,["category"] = "general",["faction_set"] = "anc_set_exclusive_sc_greenskins",}
+    ,["pttg_ritual_wh_pro01_anc_rune_rune_of_parrying"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_standard_of_wei_jin"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_groth_one-eye"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_burnt_banner_of_knights"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_satchel_of_potions"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc10_anc_talisman_carnosaur_skull"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh_dlc08_anc_talisman_headband_of_berserker"] = { ["uniqueness"] = 100,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh_dlc08_anc_enchanted_item_frost_wyrm_scale"] = { ["uniqueness"] = 100,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_armour_gut_maw"] = { ["uniqueness"] = 45,["category"] = "armour",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_skull_totem"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_khorne_daemons",}
+    ,["pttg_ritual_wh_dlc08_anc_armour_mammoth_hide_cape"] = { ["uniqueness"] = 100,["category"] = "armour",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh_dlc08_anc_magic_standard_drake_hunters"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_talisman_jade_blood_pendant"] = { ["uniqueness"] = 25,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_weapon_axe_of_khorne"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh_dlc07_anc_magic_standard_valorous_standard"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_master_rune_of_spite"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_prologue_anc_talisman_blood_of_the_motherland"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_sc_pro_kislev",}
+    ,["pttg_ritual_wh_dlc08_anc_armour_blood_stained_armour_of_morkar"] = { ["uniqueness"] = 100,["category"] = "armour",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_dlc12_anc_weapon_thing_zapper"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_elixir_of_might"] = { ["uniqueness"] = 20,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh_main_anc_weapon_sword_of_battle"] = { ["uniqueness"] = 20,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_weapon_skull_plucker"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh_dlc08_anc_magic_standard_banner_of_wolfclaw"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh_main_anc_armour_spellshield"] = { ["uniqueness"] = 20,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_miners_drinking_horn"] = { ["uniqueness"] = 15,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_weapon_obsidian_blade"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc03_anc_armour_trollhide"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_dlc20_anc_weapon_sword_of_change"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh_dlc03_anc_mark_of_chaos_crown_of_horns"] = { ["uniqueness"] = 75,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_blasted_standard"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_multi_beastmen_chaos",}
+    ,["pttg_ritual_wh3_main_anc_talisman_fractured_clasp"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh3_dlc20_anc_enchanted_item_blasphemous_amulet"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh3_dlc23_anc_talisman_talisman_of_obsidian"] = { ["uniqueness"] = 100,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh3_dlc23_anc_talisman_black_gem_of_gnar"] = { ["uniqueness"] = 100,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_khaines_ring_of_fury"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_arcane_item_spell_wrought_sceptre"] = { ["uniqueness"] = 100,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_dlc14_anc_weapon_malus_blood_warpsword"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_sea_gold_parrying_blade"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_spear_of_pakth"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_weapon_the_blade_of_realities"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc17_anc_enchanted_item_blind_eye_of_seeing"] = { ["uniqueness"] = 100,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh_dlc07_anc_weapon_the_wyrmlance"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_dlc11_anc_talisman_kraken_fang"] = { ["uniqueness"] = 90,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_enthralling_musk"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh3_main_anc_weapon_hellblade"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_multi_khorne_daemons",}
+    ,["pttg_ritual_wh2_dlc11_anc_weapon_double_barrel"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_alchemists_elixir_of_venom"] = { ["uniqueness"] = 40,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_black_staff"] = { ["uniqueness"] = 55,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_the_great_celestial_banner"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_enriched_warpstone_dust"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_weapon_executioners_axe"] = { ["uniqueness"] = 80,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_pro01_anc_rune_rune_of_striking"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc11_anc_talisman_jellyfish_in_a_jar"] = { ["uniqueness"] = 45,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_banner_of_murder"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_dismay"] = { ["uniqueness"] = 80,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_talisman_wyrdstone_necklace"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_staff_of_wu_xing"] = { ["uniqueness"] = 80,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_the_bad_moon_banner"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_sc_greenskins",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_scroll_of_leeching"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_arnizipals_black_horror"] = { ["uniqueness"] = 80,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_culchan_feathered_standard"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_weapon_staff_of_nurgle"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh_dlc07_anc_weapon_the_silver_lance_of_the_blessed"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_main_anc_weapon_the_white_sword"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_blood_feasters_banner"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_sc_khorne",}
+    ,["pttg_ritual_wh_dlc05_anc_magic_standard_the_banner_of_the_hunter_king"] = { ["uniqueness"] = 75,["category"] = "general",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_gastuvas_egg"] = { ["uniqueness"] = 100,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_main_anc_talisman_sacred_incense"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_weapon_blade_of_xen_wu"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_corpse_surgeon"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_battle_banner"] = { ["uniqueness"] = 80,["category"] = "general",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_armour_shield_of_the_mirrored_pool"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_dlc03_anc_mark_of_chaos_shadow_hide"] = { ["uniqueness"] = 5,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_dlc23_anc_armour_lesser_relic_of_skavor"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_dragon_cuirass_1"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_ever_full_kovsh"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_tome_of_furion"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_the_piranha_blade"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_armour_armour_of_khorne"] = { ["uniqueness"] = 75,["category"] = "armour",["faction_set"] = "anc_set_multi_khorne_daemons",}
+    ,["pttg_ritual_wh2_main_anc_weapon_reaver_bow"] = { ["uniqueness"] = 199,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_abhorrent_lodestone"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_valaya"] = { ["uniqueness"] = 65,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_dreaming_cloak_2"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_dreaming_ring_4"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_stegadon_war_spear"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_main_anc_talisman_talisman_of_endurance"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc24_anc_weapon_weeping_blade"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_empress_eye"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_coatlpelt_flagstaff"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc11_anc_enchanted_item_black_buckthorns_treasure_map"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_holed_banner_of_militia"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_twilight_horn_1"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_the_brass_cleaver"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_stonecrusher_mace"] = { ["uniqueness"] = 65,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_potion_of_toughness"] = { ["uniqueness"] = 20,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_ironwardens_hammer"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_gate_keepers_hammer"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc03_anc_armour_ramhorn_helm"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh_dlc08_anc_magic_standard_black_iron_reavers"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_revered_banner_of_the_ancestors"] = { ["uniqueness"] = 80,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_dragon_slayers_fang"] = { ["uniqueness"] = 75,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_dlc24_anc_arcane_item_sentient_stormcloud"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_ironwardens_tankard"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_armour_mastodon_armour"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_twilight_helm_4"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_talisman_talisman_of_preservation"] = { ["uniqueness"] = 60,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc07_anc_enchanted_item_mane_of_the_purebreed"] = { ["uniqueness"] = 70,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_standard_of_shang_yang"] = { ["uniqueness"] = 70,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_armour_void_armour"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_brooch_of_the_great_desert"] = { ["uniqueness"] = 45,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh_main_anc_talisman_pidgeon_plucker_pendant"] = { ["uniqueness"] = 5,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc24_anc_weapon_runefang"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh2_main_anc_weapon_blade_of_leaping_gold"] = { ["uniqueness"] = 70,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_sacred_banner_of_the_horned_rat"] = { ["uniqueness"] = 70,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc11_anc_armour_the_gunnarsson_kron"] = { ["uniqueness"] = 75,["category"] = "armour",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_dlc11_anc_armour_seadragon_buckler"] = { ["uniqueness"] = 45,["category"] = "armour",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_crook_and_flail_of_radiance"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh_main_anc_weapon_sword_of_striking"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_kite_of_the_uttermost_airs"] = { ["uniqueness"] = 65,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_armour_ascendant_celestial_armour"] = { ["uniqueness"] = 65,["category"] = "armour",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_weapon_blade_of_revered_tzunki"] = { ["uniqueness"] = 65,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_main_anc_armour_magnificent_armour_of_borek_beetlebrow"] = { ["uniqueness"] = 60,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_dlc07_anc_magic_standard_banner_of_defence"] = { ["uniqueness"] = 60,["category"] = "general",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh_main_anc_weapon_berserker_sword"] = { ["uniqueness"] = 20,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc03_anc_arcane_item_skull_of_rarkos"] = { ["uniqueness"] = 60,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_the_horn_of_kygor"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_weapon_jade_blade_of_the_great_fleet"] = { ["uniqueness"] = 60,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_catalytic_kiln"] = { ["uniqueness"] = 60,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_armour_scales_of_the_celestial_court"] = { ["uniqueness"] = 60,["category"] = "armour",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_dlc03_anc_mark_of_chaos_slug_skin"] = { ["uniqueness"] = 30,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_dlc24_anc_enchanted_item_mirror_of_knowledge"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh2_main_anc_weapon_bow_of_the_seafarer"] = { ["uniqueness"] = 60,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_father_niklas_mantle"] = { ["uniqueness"] = 5,["category"] = "general",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_main_anc_weapon_blade_of_bel_korhadris"] = { ["uniqueness"] = 60,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_pro01_anc_rune_rune_of_fury"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_twilight_helm_1"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_enchanted_item_shard_of_the_herdstone"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_main_anc_armour_armour_of_eternal_servitude"] = { ["uniqueness"] = 60,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_scarecrow_banner"] = { ["uniqueness"] = 5,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_book_of_ashur"] = { ["uniqueness"] = 70,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_eagle_mask_1"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_dlc07_anc_armour_gilded_cuirass"] = { ["uniqueness"] = 55,["category"] = "armour",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh3_main_anc_armour_robes_of_shang_yang"] = { ["uniqueness"] = 55,["category"] = "armour",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_main_anc_talisman_vambraces_of_defence"] = { ["uniqueness"] = 55,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_wand_of_jet"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_weapon_runefang"] = { ["uniqueness"] = 85,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_enchanted_spyglass"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_weapon_bashas_axe_of_stunty_smashin"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_greenskins",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_the_portalglyph"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_cloak_of_twilight"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_primeval_club"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_prismatic_amplifier"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_rangers_standard"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc03_anc_mark_of_chaos_gnarled_hide"] = { ["uniqueness"] = 15,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh_main_anc_mark_of_chaos_mark_of_nurgle"] = { ["uniqueness"] = 20,["category"] = "general",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh2_dlc10_anc_arcane_item_scroll_of_assault_of_stone"] = { ["uniqueness"] = 45,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_high_elves_wood_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_mangelder"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc14_anc_banner_pierre_darden"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc05_anc_armour_the_helm_of_the_hunt"] = { ["uniqueness"] = 20,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_talisman_the_black_amulet"] = { ["uniqueness"] = 60,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_main_anc_weapon_sword_of_anti-heroes"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc07_anc_enchanted_item_holy_icon"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh_dlc03_anc_arcane_item_staff_of_darkoth"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_prologue_anc_weapon_frost_shard_glaive"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_pro_kislev",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_skull_wand_of_kaloth"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_greenskins",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_gate_keepers_rat_catcher"] = { ["uniqueness"] = 75,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_slayers_axe"] = { ["uniqueness"] = 15,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc09_anc_weapon_blade_of_mourning_fire"] = { ["uniqueness"] = 90,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_silver_horn_of_vengeance"] = { ["uniqueness"] = 25,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_banner_of_eternal_flame"] = { ["uniqueness"] = 10,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_halfling_cookbook"] = { ["uniqueness"] = 35,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc10_anc_enchanted_item_burning_phoenix_pinion"] = { ["uniqueness"] = 200,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_ostermark"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_main_anc_armour_shadow_armour"] = { ["uniqueness"] = 25,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_talisman_vile_seed"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh3_main_anc_talisman_spore_censer"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh3_main_anc_talisman_ring_of_sensation"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_daemons_slaanesh",}
+    ,["pttg_ritual_wh3_dlc23_anc_weapon_life_bane_blade"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_talisman_crystal_pendant"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh3_main_anc_talisman_collar_of_khorne"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_khorne_daemons",}
+    ,["pttg_ritual_wh3_main_anc_talisman_blood_of_the_motherland"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh_dlc03_anc_magic_standard_banner_of_the_fallen_kings"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_deaths_head"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh2_dlc14_anc_talisman_malus_idol_of_darkness"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_cloak_of_the_moon_wind"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_armour_tricksters_helm"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_greyback_pelt"] = { ["uniqueness"] = 5,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh_dlc03_anc_mark_of_chaos_gouge_tusks"] = { ["uniqueness"] = 15,["category"] = "general",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh3_main_anc_armour_weird_plate"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_huanchis_blessed_totem"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_armour_iron_ice_armour"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh_main_anc_armour_nightshroud"] = { ["uniqueness"] = 40,["category"] = "armour",["faction_set"] = "anc_set_exclusive_vampire_counts",}
+    ,["pttg_ritual_wh3_main_anc_armour_fused_armour"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh3_main_anc_armour_bullgut"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_sceptre_of_entropy"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh_main_anc_weapon_sword_of_swift_slaying"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_cape_of_sniper"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_war_banner"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_gruts_sickle"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_dread_banner"] = { ["uniqueness"] = 75,["category"] = "general",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_torn_banner_of_pilgrims"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_cube_of_darkness"] = { ["uniqueness"] = 30,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_talabecland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh_dlc08_anc_armour_helm_of_reavers"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_dlc23_anc_talisman_malignant_totem"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_cloak_of_beards"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_main_anc_talisman_jet_amulet"] = { ["uniqueness"] = 20,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_weapon_lash_of_despair"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_multi_daemons_slaanesh",}
+    ,["pttg_ritual_wh3_main_anc_talisman_cathayan_jet"] = { ["uniqueness"] = 25,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_main_anc_weapon_blade_of_nurglitch"] = { ["uniqueness"] = 10,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_weapon_biting_blade"] = { ["uniqueness"] = 10,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc23_anc_weapon_lesser_relic_of_gazul"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_dragon_spear_1"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_heartseeker"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_moranions_wayshard"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_rune_strollaz_rune"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_twilight_standard_1"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_trophy_of_killers"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_sc_khorne",}
+    ,["pttg_ritual_wh_main_anc_rune_rune_of_fury"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc09_anc_arcane_item_neferras_scrolls_of_mighty_incantations"] = { ["uniqueness"] = 45,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh_dlc07_anc_magic_standard_errantry_banner"] = { ["uniqueness"] = 20,["category"] = "general",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh3_dlc23_anc_convoy_powerful_berserker"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_lichbone_pennant"] = { ["uniqueness"] = 16,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_flag_of_the_daystar"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_main_anc_weapon_blood_cleaver"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_main_anc_weapon_dagger_of_hotek"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_scrying_stone"] = { ["uniqueness"] = 15,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc09_anc_talisman_golden_eye_of_rah_nutt"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh_pro01_anc_rune_rune_of_might"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_storm_banner"] = { ["uniqueness"] = 50,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_dreaming_ring_1"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_rune_of_cleaving"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_weapon_the_tenderiser"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh_dlc07_anc_weapon_sword_of_the_ladys_champion"] = { ["uniqueness"] = 45,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh_main_anc_armour_enchanted_shield"] = { ["uniqueness"] = 5,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_weapon_caledors_bane"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_alchemists_elixir_of_iron_skin"] = { ["uniqueness"] = 45,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_dlc20_anc_armour_bronze_armour_of_zhrakk"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh_main_anc_talisman_dawnstone"] = { ["uniqueness"] = 25,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_staff_of_solidity"] = { ["uniqueness"] = 199,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_weapon_relic_sword"] = { ["uniqueness"] = 10,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_potion_of_foolhardiness"] = { ["uniqueness"] = 5,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc08_anc_talisman_lootbag_of_marauders"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_main_anc_armour_obsidian_armour"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_power_scroll"] = { ["uniqueness"] = 20,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_dlc09_anc_arcane_item_blue_khepra"] = { ["uniqueness"] = 40,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_tomb_kings_vampire_coast",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_sceptre_of_stability"] = { ["uniqueness"] = 15,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_bloodied_banner_of_slayers"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_main_anc_weapon_burning_blade_of_chotec"] = { ["uniqueness"] = 20,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_dragonhorn"] = { ["uniqueness"] = 15,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_dlc07_anc_armour_armour_of_the_midsummer_sun"] = { ["uniqueness"] = 40,["category"] = "armour",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh_main_anc_armour_helm_of_discord"] = { ["uniqueness"] = 30,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_talisman_greedy_fist"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_dragonfly_of_quicksilver"] = { ["uniqueness"] = 10,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_main_anc_talisman_rival_hide_talisman"] = { ["uniqueness"] = 15,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_eagle_bow_1"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_weapon_serpent_fang"] = { ["uniqueness"] = 60,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_dlc23_anc_armour_blackshard_armour"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_caravan_spy_in_court"] = { ["uniqueness"] = 200,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_bastion_standard"] = { ["uniqueness"] = 90,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_weapon_prospectors_pickaxe"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_icon_of_eternal_virulence"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_daemons_nurgle",}
+    ,["pttg_ritual_wh_dlc05_anc_weapon_the_bow_of_loren"] = { ["uniqueness"] = 20,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_weapon_blade_of_corruption"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_the_screaming_banner"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_counts",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_lifetaker_banner"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_sc_khorne",}
+    ,["pttg_ritual_wh2_main_anc_armour_skull_helmet"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_saint_annushkas_finger_bone"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_rangers_cloak"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_fan_of_the_magister"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_rampagers_standard"] = { ["uniqueness"] = 55,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_rookie_gunner"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_dlc09_anc_talisman_golden_ankhra"] = { ["uniqueness"] = 45,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_dlc12_anc_magic_standard_exalted_banner_of_xapati"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_prologue_anc_armour_basic"] = { ["uniqueness"] = 20,["category"] = "armour",["faction_set"] = "anc_set_exclusive_sc_pro_kislev",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_troll_slayers_gauntlets"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_the_moon_empress"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_troll_slayers_amulet"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_armour_dragonscale_shield"] = { ["uniqueness"] = 20,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_ships_colors"] = { ["uniqueness"] = 75,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh3_dlc24_anc_arcane_item_captains_horn"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh2_main_anc_talisman_deathmask"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_miners_helm"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_scroll_of_shielding"] = { ["uniqueness"] = 15,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_banner_of_swiftness"] = { ["uniqueness"] = 15,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_dlc24_anc_talisman_facial_scruff"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_brahmir_statue"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh_main_anc_weapon_tormentor_sword"] = { ["uniqueness"] = 5,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_talisman_amulet_of_itzl"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh3_dlc24_anc_arcane_item_corrupted_flame"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh2_main_anc_weapon_deathpiercer"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_dlc07_anc_talisman_siriennes_locket"] = { ["uniqueness"] = 45,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_bretonnia",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_veterans_flask"] = { ["uniqueness"] = 15,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_weapon_the_eternal_blade"] = { ["uniqueness"] = 75,["category"] = "weapon",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_main_anc_weapon_sword_of_the_hornet"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh_main_anc_mark_of_chaos_mark_of_khorne"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh_main_anc_armour_charmed_shield"] = { ["uniqueness"] = 5,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc03_anc_enchanted_item_horn_of_the_first_beast"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_eagle_quiver_1"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_weapon_the_hammer_of_karak_drazh"] = { ["uniqueness"] = 45,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_lion_standard"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_featherfoe_torc"] = { ["uniqueness"] = 25,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_skull_and_crossbones"] = { ["uniqueness"] = 1,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_steppe_hunters_horn"] = { ["uniqueness"] = 5,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_kislev",}
+    ,["pttg_ritual_wh_dlc08_anc_talisman_wolf_teeth_amulet"] = { ["uniqueness"] = 30,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_dlc24_anc_talisman_the_golden_eye_of_tzeentch"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh2_dlc11_anc_magic_standard_spell_of_the_necromancers_apprentice"] = { ["uniqueness"] = 5,["category"] = "general",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_troll_slayers_hide"] = { ["uniqueness"] = 35,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_weapon_sword_of_strife"] = { ["uniqueness"] = 40,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_weapon_foe_bane"] = { ["uniqueness"] = 25,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_earthing_rod"] = { ["uniqueness"] = 25,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_reikland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh_main_anc_armour_the_armour_of_meteoric_iron"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_multi_kislev_empire",}
+    ,["pttg_ritual_wh_dlc05_anc_weapon_daiths_reaper"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_talisman_jade_amulet"] = { ["uniqueness"] = 40,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_old_guards_tankard"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc11_anc_enchanted_item_pyrotechnic_compound"] = { ["uniqueness"] = 45,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh_main_anc_talisman_talisman_of_protection"] = { ["uniqueness"] = 15,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_ancestor_rune_of_grungni"] = { ["uniqueness"] = 200,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_twilight_helm_3"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_standard_of_chaos_glory"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_dlc11_anc_talisman_blackpearl_eye"] = { ["uniqueness"] = 45,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_vampire_coast",}
+    ,["pttg_ritual_wh_dlc08_anc_enchanted_item_manticore_horn"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh_main_anc_weapon_fencers_blades"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc08_anc_weapon_fimir_hammer"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_rangers_pouch"] = { ["uniqueness"] = 15,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_jar_of_all_souls"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_cathay",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_banner_of_hellfire"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_khorne_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_cannibal_totem"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_slayers_belt"] = { ["uniqueness"] = 15,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_armour_gamblers_armour"] = { ["uniqueness"] = 20,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_weapon_scimitar_of_the_sun_resplendent"] = { ["uniqueness"] = 50,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_dragon_mask_2"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_main_anc_enchanted_item_the_chromatic_tome"] = { ["uniqueness"] = 75,["category"] = "enchanted_item",["faction_set"] = "anc_set_multi_tzeentch_daemons_nurgle_slaanesh",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_brass_horn"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc17_anc_rune_personal_rune_of_iron"] = { ["uniqueness"] = 10,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_armour_enchanted_ithilmar_breastplate"] = { ["uniqueness"] = 199,["category"] = "armour",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_enchanted_item_ironbeards_bracers"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh3_main_anc_arcane_item_hellheart"] = { ["uniqueness"] = 50,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_ogre_kingdoms",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_standard_of_hag_graef"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc09_anc_enchanted_item_cloak_of_the_dunes"] = { ["uniqueness"] = 40,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_curse_charm_of_tepok"] = { ["uniqueness"] = 20,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_main_anc_armour_sacred_stegadon_helm_of_itza"] = { ["uniqueness"] = 40,["category"] = "armour",["faction_set"] = "anc_set_exclusive_lizardmen",}
+    ,["pttg_ritual_wh2_dlc14_anc_weapon_malus_slaugher_warpsword"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh2_dlc13_anc_weapon_runefang_solland"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_sc_empire",}
+    ,["pttg_ritual_wh2_dlc09_anc_magic_standard_standard_of_the_undying_legion"] = { ["uniqueness"] = 40,["category"] = "general",["faction_set"] = "anc_set_exclusive_tomb_kings",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_dragon_pendant_1"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh3_dlc23_anc_talisman_major_relic_of_grimnir"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_dlc08_anc_weapon_troll_fang_dagger"] = { ["uniqueness"] = 30,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_norsca",}
+    ,["pttg_ritual_wh3_dlc23_anc_enchanted_item_the_mask_of_the_furnace"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_the_book_of_the_phoenix"] = { ["uniqueness"] = 35,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_forbidden_rod"] = { ["uniqueness"] = 35,["category"] = "arcane_item",["faction_set"] = "all_except_khorne_dwarfs",}
+    ,["pttg_ritual_wh2_main_anc_weapon_the_fellblade"] = { ["uniqueness"] = 100,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_talisman_prospectors_charge"] = { ["uniqueness"] = 35,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_griffon_banner"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_multi_kislev_empire",}
+    ,["pttg_ritual_wh2_dlc15_anc_armour_forest_dragon_special"] = { ["uniqueness"] = 200,["category"] = "armour",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_folariaths_robe"] = { ["uniqueness"] = 45,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh_dlc03_anc_weapon_the_steel_claws"] = { ["uniqueness"] = 35,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_beastmen",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_gleaming_pennant"] = { ["uniqueness"] = 5,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_eagle_vambraces_2"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_twilight_standard_4"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh_main_anc_talisman_dragonbane_gem"] = { ["uniqueness"] = 5,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_shroud_of_dripping_death"] = { ["uniqueness"] = 30,["category"] = "general",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_magic_standard_razor_standard"] = { ["uniqueness"] = 45,["category"] = "general",["faction_set"] = "all",}
+    ,["pttg_ritual_wh_main_anc_talisman_obsidian_lodestone"] = { ["uniqueness"] = 45,["category"] = "talisman",["faction_set"] = "all",}
+    ,["pttg_ritual_wh3_main_anc_magic_standard_great_standard_of_sundering"] = { ["uniqueness"] = 35,["category"] = "general",["faction_set"] = "anc_set_multi_tzeentch_daemons",}
+    ,["pttg_ritual_wh2_dlc16_anc_armour_twilight_helm_2"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_enchanted_item_dreaming_cloak_1"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_enchanted_item_gilded_horn_of_galon_konook"] = { ["uniqueness"] = 199,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh2_dlc12_anc_armour_alloy_shield"] = { ["uniqueness"] = 50,["category"] = "armour",["faction_set"] = "anc_set_exclusive_skaven",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_the_other_tricksters_shard"] = { ["uniqueness"] = 50,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_eagle_mask_4"] = { ["uniqueness"] = 199,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_dlc16_anc_weapon_twilight_spear_3"] = { ["uniqueness"] = 200,["category"] = "weapon",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_arcane_item_the_gem_of_sunfire"] = { ["uniqueness"] = 75,["category"] = "arcane_item",["faction_set"] = "anc_set_exclusive_high_elves",}
+    ,["pttg_ritual_wh3_dlc20_anc_enchanted_item_the_beguiling_gem"] = { ["uniqueness"] = 30,["category"] = "enchanted_item",["faction_set"] = "anc_set_exclusive_chaos",}
+    ,["pttg_ritual_wh_main_anc_arcane_item_skull_of_katam"] = { ["uniqueness"] = 15,["category"] = "arcane_item",["faction_set"] = "anc_set_multi_beastmen_chaos",}
+    ,["pttg_ritual_wh3_dlc24_anc_talisman_corrupted_icon"] = { ["uniqueness"] = 200,["category"] = "talisman",["faction_set"] = "wh3_dlc24_tze_the_deceivers",}
+    ,["pttg_ritual_wh2_dlc16_anc_talisman_eagle_mask_2"] = { ["uniqueness"] = 50,["category"] = "talisman",["faction_set"] = "anc_set_exclusive_wood_elves",}
+    ,["pttg_ritual_wh2_main_anc_magic_standard_sea_serpent_standard"] = { ["uniqueness"] = 25,["category"] = "general",["faction_set"] = "anc_set_exclusive_dark_elves",}
+    ,["pttg_ritual_wh_main_anc_rune_master_rune_of_courage"] = { ["uniqueness"] = 20,["category"] = "general",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,["pttg_ritual_wh_main_anc_enchanted_item_ironcurse_icon"] = { ["uniqueness"] = 5,["category"] = "enchanted_item",["faction_set"] = "all",}
+    ,["pttg_ritual_wh2_dlc10_dwf_anc_armour_slayers_gauntlets"] = { ["uniqueness"] = 15,["category"] = "armour",["faction_set"] = "anc_set_exclusive_dwarfs",}
+    ,}
+    self:add_rituals(items_all)
+    
     self.active_shop_items = pttg:get_state('active_shop_items')
     self.excluded_shop_items = pttg:get_state('excluded_items')
 end
 
 function pttg_glory_shop:populate_shop()
     local shop_sizes = pttg:get_state('shop_sizes')
-    pttg:log(string.format('[pttg_glory_shop] Populating shop with(wep:%i,arm:%i,ench:%i,tal:%i,arc:%i,ban:%i)',
-        shop_sizes.pttg_crafting_weapons,
-        shop_sizes.pttg_crafting_armour,
-        shop_sizes.pttg_crafting_enchanted_items,
-        shop_sizes.pttg_crafting_talismans,
-        shop_sizes.pttg_crafting_arcane_items,
-        shop_sizes.pttg_crafting_banners
-        )
+    pttg:log(string.format('[pttg_glory_shop] Populating shop with(merch: %i, units:%i)',
+            shop_sizes.merchandise,
+            shop_sizes.units)
     )
-    for category, rituals in pairs(self.rituals) do
+
+    local random_tiers = {}
+
+    for tier, chance in pairs(pttg:get_state('shop_chances')) do
+        for i = 1, chance do
+            table.insert(random_tiers, tier)
+        end
+    end
+
+    for category, rituals in pairs(self.shop_items) do
         local ritual_keys = {}
         local targets = {}
-        local target = cm:random_number(#rituals)
-        -- TODO: add weights feature to random selection
+        
         while #targets < shop_sizes[category] do
-            if not ritual_keys[rituals[target]] and not self.excluded_shop_items[rituals[target]] then
-                table.insert(targets, target)
-                ritual_keys[rituals[target]] = true
+            local pos = cm:random_number(#random_tiers)
+            local tier = random_tiers[pos]
+            table.remove(random_tiers, pos)
+
+            -- TODO: Filter all eligible item groups
+            local random_rituals = rituals[tier]['all']
+            if random_rituals then
+
+                -- TODO: add weights feature to random selection
+                local target = cm:random_number(#random_rituals)
+
+                if not ritual_keys[random_rituals[target]] and not self.excluded_shop_items[random_rituals[target]] then
+                    table.insert(targets, target)
+                    ritual_keys[random_rituals[target]] = true
+                end
             end
-            target = cm:random_number(#rituals)
         end
-        
-        local rituals = {}
-        
+
+        local activated_rituals = {}
+
         for ritual_key, _ in pairs(ritual_keys) do
             pttg:log(string.format('[pttg_glory_shop] Populating %s for %s', ritual_key, category))
-            table.insert(rituals, ritual_key)
+            table.insert(activated_rituals, ritual_key)
         end
-        
-        pttg_glory_shop:unlock_rituals(rituals)
+
+        pttg_glory_shop:unlock_rituals(activated_rituals)
     end
 end
 
-function pttg_glory_shop:disable_shop_button() 
+function pttg_glory_shop:disable_shop_button()
     pttg:log("[pttg_glory_shop] Disabling shop button.")
     local root = core:get_ui_root()
-    
+
     local button = find_uicomponent(root, "hud_campaign", "faction_buttons_docker", "button_group_management", "button_mortuary_cult")
-    
+
     if not button then
         pttg:log("[pttg_ui] Could not find button.")
         return
@@ -1311,25 +1093,25 @@ function pttg_glory_shop:disable_shop_button()
     button:SetDisabled(true)
     button:StopPulseHighlight()
     button:Highlight(false)
-    
+
     return
 end
 
-function pttg_glory_shop:enable_shop_button() 
+function pttg_glory_shop:enable_shop_button()
     pttg:log("[pttg_glory_shop] Highlighting shop button.")
     local root = core:get_ui_root()
-    
+
     local button = find_uicomponent(root, "hud_campaign", "faction_buttons_docker", "button_group_management", "button_mortuary_cult")
-    
+
     if not button then
         pttg:log("[pttg_ui] Could not find button.")
         return
     end
-    
+
     button:SetDisabled(false)
     button:StartPulseHighlight(1)
     button:Highlight(true)
-    
+
     return
 end
 
