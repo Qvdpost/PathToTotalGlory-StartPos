@@ -114,15 +114,15 @@ function pttg_glory_shop:init_shop()
     )
 
     local tier_to_uniqueness = {29, 49, 99}
-    -- self.merc_pool[cultures[k]][tier], {unit_key, unit_info.weight, unit_info.cost}
+
     for tier, units in pairs(pttg_merc_pool.merc_pool[cm:get_local_faction():culture()]) do
         for _, unit_info in pairs(units) do
             local item_info = {}
             item_info.uniqueness = tier_to_uniqueness[tier]
             item_info.category = 'units'
             item_info.faction_set = 'all'
-            item_info.item = unit_info[1]
-            self:add_item("pttg_ritual_"..unit_info[1], item_info)
+            item_info.item = unit_info.key
+            self:add_item("pttg_ritual_"..unit_info.key, item_info)
         end
     end
 
