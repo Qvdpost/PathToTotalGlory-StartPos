@@ -1,5 +1,6 @@
 local pttg = core:get_static_object("pttg");
 local pttg_merc_pool = core:get_static_object("pttg_merc_pool");
+local pttg_item_pool = core:get_static_object("pttg_item_pool");
 
 local pttg_glory_shop = {
     shop_items = {
@@ -11,33 +12,6 @@ local pttg_glory_shop = {
     excluded_shop_items = {
     }
 }
-
-function pttg_glory_shop:add_item(ritual, info)
-    pttg:log(string.format('[pttg_glory_shop] Adding ritual: %s (%s, %s, %s)',
-            ritual,
-            tostring(info.uniqueness),
-            tostring(info.category),
-            tostring(info.faction_set),
-            tostring(info.item)
-        )
-    )
-    local crafting_group = "merchandise"
-    if info.category == 'units' then
-        crafting_group = 'units'
-    end
-    local tier = self:item_tier(info.uniqueness)
-    if self.shop_items[crafting_group][tier][info.faction_set] then
-        table.insert(self.shop_items[crafting_group][tier][info.faction_set], {ritual=ritual, info=info})
-    else
-        self.shop_items[crafting_group][tier][info.faction_set] = {{ritual=ritual, info=info}}
-    end
-end
-
-function pttg_glory_shop:add_items(items)
-    for ritual, info in pairs(items) do
-        self:add_item(ritual, info)
-    end
-end
 
 function pttg_glory_shop:reset_rituals()
     local rituals = {}
@@ -87,31 +61,14 @@ function pttg_glory_shop:lock_ritual(shop_item)
     pttg:set_state('active_shop_items', self.active_shop_items)
 end
 
-function pttg_glory_shop:item_tier(uniqueness)
-    -- wh2_dlc17_anc_group_rune	150	150
-    -- wh_main_anc_group_crafted	199	199
-
-    if uniqueness < 30 then -- wh_main_anc_group_common	29	0
-        return 1
-    elseif uniqueness < 50 then -- wh_main_anc_group_uncommon	49	30
-        return 2
-    elseif uniqueness < 100 then -- wh_main_anc_group_rare	100	50
-        return 3
-    else -- wh_main_anc_group_unique	200	200
-        return 4
-    end
-
-end
-
 function pttg_glory_shop:init_shop()
     pttg = core:get_static_object("pttg");
     pttg_merc_pool = core:get_static_object("pttg_merc_pool");
     local shop_sizes = pttg:get_state('shop_sizes')
 
-    pttg:log(string.format('[pttg_glory_shop] Initialising shop with(merch: %i, units:%i)',
-            shop_sizes.merchandise,
-            shop_sizes.units)
-    )
+    pttg:log(string.format('[pttg_glory_shop] Initialising shop.'))
+
+    self.shop_items.merchandise = pttg_item_pool:get_craftable_items(self.excluded_shop_items)
 
     local tier_to_uniqueness = {29, 49, 99}
 
@@ -148,12 +105,8 @@ function pttg_glory_shop:init_shop()
         true
     );
 
-    self:add_item("pttg_ritual_glorious_weapon", { ["uniqueness"] = 75, ["category"] = "weapon", ["faction_set"] = "all", ["item"] = "pttg_glorious_weapon"})
-
-
-    
     self.active_shop_items = pttg:get_state('active_shop_items')
-    self.excluded_shop_items = pttg:get_state('excluded_items')
+    self.excluded_shop_items = pttg:get_state('excluded_shop_items')
 end
 
 function pttg_glory_shop:populate_shop()
@@ -260,7 +213,7 @@ core:add_listener(
     end,
     function(context)
         pttg_glory_shop.excluded_shop_items[context:ritual():ritual_key()] = true
-        pttg:set_state('excluded_items', pttg_glory_shop.excluded_shop_items)
+        pttg:set_state('excluded_shop_items', pttg_glory_shop.excluded_shop_items)
     end,
     true
 )
