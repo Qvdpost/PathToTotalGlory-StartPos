@@ -34,90 +34,96 @@ local function hide_recruit_buttons()
     end
 end
 
-core:add_listener(
-    "pttg_hide_recruit_buttons",
-    "CharacterSelected",
-    true,
-    function(context)
-        hide_recruit_buttons()
-    end,
-    true
-)
 
-core:add_listener(
-    "pttg_hide_recruit_buttons",
-    "PanelOpenedCampaign",
-    true,
-    function(context)
-        hide_recruit_buttons()
-    end,
-    true
-)
+cm:add_first_tick_callback(
+    function()
 
-core:add_listener(
-    "pttg_hide_recruit_buttons",
-    "PanelClosedCampaign",
-    true,
-    function(context)
-        hide_recruit_buttons()
-    end,
-    true
-)
-
-core:add_listener(
-    "pttg_hide_recruit_buttons",
-    "ComponentLClickUp",
-    function(context)
-        local army_panel = find_uicomponent(core:get_ui_root(), "hud_campaign", "hud_center_docker", "small_bar",
-            "button_subpanel_parent", "button_subpanel", "button_group_army")
-        return is_uicomponent(army_panel) and army_panel:Visible(true)
-    end,
-    function(context)
-        hide_recruit_buttons()
-    end,
-    true
-);
-
-core:add_listener(
-    "pttg_hide_recruit_buttons",
-    "UnitCreated",
-    true,
-    function(context)
-        hide_recruit_buttons()
-        cm:real_callback(hide_recruit_buttons, 50)
-    end,
-    true
-)
-
-core:add_listener(
-    "pttg_hide_recruit_buttons",
-    "UnitDisbanded",
-    true,
-    function(context)
-        hide_recruit_buttons()
-        cm:real_callback(hide_recruit_buttons, 50)
-    end,
-    true
-)
-
-core:add_listener(
-    "pttg_hide_recruit_buttons",
-    "UnitTrained",
-    true,
-    function(context)
-        hide_recruit_buttons()
-        cm:real_callback(hide_recruit_buttons, 50)
-    end,
-    true
-)
-
-core:add_listener(
-    "pttg_hide_recruit_buttons",
-    "UnitMergedAndDestroyed",
-    true,
-    function(context)
-        hide_recruit_buttons()
-        cm:real_callback(hide_recruit_buttons, 50)
-    end,
-    true
+        core:add_listener(
+            "pttg_hide_recruit_buttons",
+            "CharacterSelected",
+            true,
+            function(context)
+                hide_recruit_buttons()
+            end,
+            true
+        )
+        
+        core:add_listener(
+            "pttg_hide_recruit_buttons",
+            "PanelOpenedCampaign",
+            true,
+            function(context)
+                hide_recruit_buttons()
+            end,
+            true
+        )
+        
+        core:add_listener(
+            "pttg_hide_recruit_buttons",
+            "PanelClosedCampaign",
+            true,
+            function(context)
+                hide_recruit_buttons()
+            end,
+            true
+        )
+        
+        core:add_listener(
+            "pttg_hide_recruit_buttons",
+            "ComponentLClickUp",
+            function(context)
+                local army_panel = find_uicomponent(core:get_ui_root(), "hud_campaign", "hud_center_docker", "small_bar",
+                    "button_subpanel_parent", "button_subpanel", "button_group_army")
+                return is_uicomponent(army_panel) and army_panel:Visible(true)
+            end,
+            function(context)
+                hide_recruit_buttons()
+            end,
+            true
+        );
+        
+        core:add_listener(
+            "pttg_hide_recruit_buttons",
+            "UnitCreated",
+            true,
+            function(context)
+                hide_recruit_buttons()
+                cm:real_callback(hide_recruit_buttons, 50)
+            end,
+            true
+        )
+        
+        core:add_listener(
+            "pttg_hide_recruit_buttons",
+            "UnitDisbanded",
+            true,
+            function(context)
+                hide_recruit_buttons()
+                cm:real_callback(hide_recruit_buttons, 50)
+            end,
+            true
+        )
+        
+        core:add_listener(
+            "pttg_hide_recruit_buttons",
+            "UnitTrained",
+            true,
+            function(context)
+                hide_recruit_buttons()
+                cm:real_callback(hide_recruit_buttons, 50)
+            end,
+            true
+        )
+        
+        core:add_listener(
+            "pttg_hide_recruit_buttons",
+            "UnitMergedAndDestroyed",
+            true,
+            function(context)
+                hide_recruit_buttons()
+                cm:real_callback(hide_recruit_buttons, 50)
+            end,
+            true
+        )
+    end
 )
